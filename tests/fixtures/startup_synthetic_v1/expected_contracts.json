@@ -1,0 +1,125 @@
+{
+  "schema_version": "startup_synthetic_expected_contracts@1",
+  "dataset": "startup_synthetic_v1",
+  "contract_version": "queue2-wave2@1",
+  "cases": {
+    "marketplace": {
+      "profile_fields": {
+        "problem": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "solution": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "customer_segment": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "business_model": {"status": "insufficient_data", "expected_evidence_status": "gap"},
+        "traction": {"status": "contradicted", "expected_evidence_status": "conflicting"},
+        "market": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "competition": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "financials": {"status": "partial", "expected_evidence_status": "partial"}
+      },
+      "competitor_categories": ["direct", "indirect", "potential_entrant", "substitute", "do_nothing"],
+      "expected_contradictions": ["active_supplier_count_conflict"],
+      "expected_gap_codes": ["input.missing:take_rate", "input.missing:monthly_net_burn"],
+      "expected_unsupported_claims": ["procurement_cycle_reduction_60_percent"],
+      "expected_metric_pack": ["burn_multiple", "cac", "gross_margin", "net_burn", "period_growth", "runway_months"],
+      "readiness": {
+        "status": "needs_validation",
+        "blocking_questions": ["confirm_take_rate", "resolve_supplier_count", "prove_buyer_repeat_usage"]
+      },
+      "market_research": {
+        "source_mode": "frozen",
+        "as_of": "2026-08-13",
+        "source_ids": ["frozen_marketplace_competitors", "frozen_marketplace_segment"],
+        "market_sizing_status": "partial"
+      },
+      "trace_to_report_lineage": ["input_documents", "profile_fields", "metrics", "readiness", "research_sources", "competitors", "market_sizing", "risks", "report_sections"]
+    },
+    "pre_revenue_service": {
+      "profile_fields": {
+        "problem": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "solution": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "customer_segment": {"status": "contradicted", "expected_evidence_status": "conflicting"},
+        "business_model": {"status": "insufficient_data", "expected_evidence_status": "gap"},
+        "traction": {"status": "insufficient_data", "expected_evidence_status": "gap"},
+        "market": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "competition": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "financials": {"status": "insufficient_data", "expected_evidence_status": "gap"}
+      },
+      "competitor_categories": ["direct", "indirect", "substitute"],
+      "expected_contradictions": ["target_customer_segment_conflict"],
+      "expected_gap_codes": ["input.missing:cash", "input.missing:revenue"],
+      "expected_unsupported_claims": ["regulation_driven_demand_without_source"],
+      "expected_metric_pack": ["cac", "gross_margin", "net_burn", "runway_months"],
+      "readiness": {
+        "status": "not_ready",
+        "blocking_questions": ["define_paid_icp", "collect_cash_position", "validate_willingness_to_pay"]
+      },
+      "market_research": {
+        "source_mode": "frozen",
+        "as_of": "2026-08-13",
+        "source_ids": ["frozen_service_competitors", "frozen_agency_segment"],
+        "market_sizing_status": "insufficient_data"
+      },
+      "trace_to_report_lineage": ["input_documents", "profile_fields", "metrics", "readiness", "research_sources", "competitors", "market_sizing", "risks", "report_sections"]
+    },
+    "saas": {
+      "profile_fields": {
+        "problem": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "solution": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "customer_segment": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "business_model": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "traction": {"status": "contradicted", "expected_evidence_status": "conflicting"},
+        "market": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "competition": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "financials": {"status": "partial", "expected_evidence_status": "partial"}
+      },
+      "competitor_categories": ["direct", "indirect", "potential_entrant"],
+      "expected_contradictions": ["arr_deck_metrics_conflict"],
+      "expected_gap_codes": ["input.missing:monthly_recurring_revenue", "input.missing:cash"],
+      "expected_unsupported_claims": ["churn_reduction_42_percent_without_cohort"],
+      "expected_metric_pack": ["arr", "burn_multiple", "cac", "cac_payback_months", "gross_margin", "logo_churn", "ltv", "ltv_cac", "mrr", "net_burn", "nrr", "period_growth", "revenue_churn", "runway_months"],
+      "readiness": {
+        "status": "ready_for_first_sales",
+        "blocking_questions": ["resolve_arr_conflict", "add_cash_balance", "prove_churn_claim"]
+      },
+      "market_research": {
+        "source_mode": "frozen",
+        "as_of": "2026-08-13",
+        "source_ids": ["frozen_saas_competitors", "frozen_finops_segment"],
+        "market_sizing_status": "calculated"
+      },
+      "trace_to_report_lineage": ["input_documents", "profile_fields", "metrics", "readiness", "research_sources", "competitors", "market_sizing", "risks", "report_sections"]
+    },
+    "transactional": {
+      "profile_fields": {
+        "problem": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "solution": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "customer_segment": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "business_model": {"status": "source_fact", "expected_evidence_status": "supported"},
+        "traction": {"status": "contradicted", "expected_evidence_status": "conflicting"},
+        "market": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "competition": {"status": "inferred", "expected_evidence_status": "requires_research"},
+        "financials": {"status": "partial", "expected_evidence_status": "partial"}
+      },
+      "competitor_categories": ["direct", "indirect", "do_nothing"],
+      "expected_contradictions": ["order_volume_receipt_zip_conflict"],
+      "expected_gap_codes": ["input.missing:order_volume", "input.missing:gross_margin_rate"],
+      "expected_unsupported_claims": ["conversion_benchmark_superiority_without_source"],
+      "expected_metric_pack": ["gross_margin", "net_burn", "period_growth", "runway_months"],
+      "readiness": {
+        "status": "needs_validation",
+        "blocking_questions": ["resolve_order_volume", "collect_gross_margin_rate", "source_conversion_benchmark"]
+      },
+      "market_research": {
+        "source_mode": "frozen",
+        "as_of": "2026-08-13",
+        "source_ids": ["frozen_transactional_competitors", "frozen_checkout_segment"],
+        "market_sizing_status": "partial"
+      },
+      "trace_to_report_lineage": ["input_documents", "profile_fields", "metrics", "readiness", "research_sources", "competitors", "market_sizing", "risks", "report_sections"]
+    }
+  },
+  "report_sections": ["summary", "readiness", "metrics", "market_research", "risks", "next_questions", "traceability"],
+  "trace_contract": {
+    "requires_case_run_filtering": true,
+    "requires_report_lineage": true,
+    "requires_sanitized_usage": true
+  }
+}

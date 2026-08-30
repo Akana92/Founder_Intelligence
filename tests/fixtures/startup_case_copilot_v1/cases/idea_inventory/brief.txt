@@ -1,0 +1,22 @@
+Founder idea brief: SilkStock Planner
+
+Concept:
+SilkStock Planner is an inventory-planning SaaS for Central Asian independent retailers and regional distributors that still coordinate replenishment through spreadsheets, messengers, and weekly calls.
+
+Buyer:
+Operations directors and owner-operators at retail chains, wholesale distributors, and regional buying groups.
+
+User:
+Inventory planners, store managers, and procurement coordinators who need earlier stockout warnings and a shared replenishment queue.
+
+Geography:
+Initial launch is planned for Kazakhstan and Uzbekistan, with cross-border supplier workflows designed for teams that buy from Almaty, Tashkent, and nearby logistics hubs.
+
+Pricing hypothesis:
+The founder is considering a paid subscription tied to store or warehouse coverage, plus an onboarding package for catalog cleanup. No signed price or payment data exists yet.
+
+Launch window:
+Target pilot launch window is Q2 2027, after the founder secures retailer interview commitments and validates integration requirements with common accounting systems.
+
+Known gaps:
+No uploaded document provides revenue, expense, burn, cash balance, customer count, ARR, MRR, or cohort metrics. The case is idea-only and should ask for evidence rather than infer operating metrics.

@@ -1,0 +1,157 @@
+{
+  "schema_version": "startup_synthetic_saas_metrics_golden@1",
+  "formula_set": "startup_unit_economics_metrics@1",
+  "fixture": "synthetic_saas_v1",
+  "cases": [
+    {
+      "metric": "mrr",
+      "formula_version": "mrr@1",
+      "facts": [
+        {"alias": "mrr_a", "name": "monthly_recurring_revenue", "value": "10000", "unit": "USD/month", "period": "2026-07"},
+        {"alias": "mrr_b", "name": "monthly_recurring_revenue", "value": "5000", "unit": "USD/month", "period": "2026-07"}
+      ],
+      "expected": {"status": "calculated", "value": "15000.000000", "display": "15000.00", "unit": "USD/month", "period": "2026-07", "input_aliases": ["mrr_b", "mrr_a"], "warnings": []}
+    },
+    {
+      "metric": "arr",
+      "formula_version": "arr@1",
+      "facts": [
+        {"alias": "mrr_a", "name": "monthly_recurring_revenue", "value": "10000", "unit": "USD/month", "period": "2026-07"},
+        {"alias": "mrr_b", "name": "monthly_recurring_revenue", "value": "5000", "unit": "USD/month", "period": "2026-07"}
+      ],
+      "expected": {"status": "calculated", "value": "180000.000000", "display": "180000.00", "unit": "USD", "period": "2026-07", "input_aliases": ["mrr_b", "mrr_a"], "warnings": []}
+    },
+    {
+      "metric": "period_growth",
+      "formula_version": "period_growth@1",
+      "facts": [
+        {"alias": "revenue_prior", "name": "revenue", "value": "96000", "unit": "USD", "period": "2026-Q1"},
+        {"alias": "revenue_current", "name": "revenue", "value": "120000", "unit": "USD", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "0.250000", "display": "0.2500", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["revenue_current", "revenue_prior"], "warnings": []}
+    },
+    {
+      "metric": "gross_margin",
+      "formula_version": "gross_margin@1",
+      "facts": [
+        {"alias": "revenue", "name": "revenue", "value": "120000", "unit": "USD", "period": "2026-Q2"},
+        {"alias": "cogs", "name": "cogs", "value": "36000", "unit": "USD", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "0.700000", "display": "0.7000", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["revenue", "cogs"], "warnings": []}
+    },
+    {
+      "metric": "net_burn",
+      "formula_version": "net_burn@1",
+      "facts": [
+        {"alias": "cash_outflows", "name": "cash_outflows", "value": "90000", "unit": "USD", "period": "2026-07"},
+        {"alias": "cash_inflows", "name": "cash_inflows", "value": "30000", "unit": "USD", "period": "2026-07"}
+      ],
+      "expected": {"status": "calculated", "value": "60000.000000", "display": "60000.00", "unit": "USD", "period": "2026-07", "input_aliases": ["cash_outflows", "cash_inflows"], "warnings": []}
+    },
+    {
+      "metric": "runway_months",
+      "formula_version": "runway_months@1",
+      "facts": [
+        {"alias": "cash", "name": "cash", "value": "300000", "unit": "USD", "period": "2026-07"},
+        {"alias": "monthly_burn", "name": "monthly_net_burn", "value": "60000", "unit": "USD/month", "period": "2026-07"}
+      ],
+      "expected": {"status": "calculated", "value": "5.000000", "display": "5.0", "unit": "months", "period": "2026-07", "input_aliases": ["cash", "monthly_burn"], "warnings": []}
+    },
+    {
+      "metric": "cac",
+      "formula_version": "cac@1",
+      "facts": [
+        {"alias": "sales", "name": "sales_marketing_spend", "value": "50000", "unit": "USD", "period": "2026-Q2"},
+        {"alias": "new_customers", "name": "new_customers", "value": "100", "unit": "count", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "500.000000", "display": "500.00", "unit": "USD", "period": "2026-Q2", "input_aliases": ["sales", "new_customers"], "warnings": []}
+    },
+    {
+      "metric": "ltv",
+      "formula_version": "ltv@gross_margin_adjusted_arpa_churn@1",
+      "assumptions": {"ltv_model": "gross_margin_adjusted_arpa_churn"},
+      "facts": [
+        {"alias": "arpa", "name": "monthly_arpa", "value": "100", "unit": "USD/month", "period": "2026-07"},
+        {"alias": "gm_rate", "name": "gross_margin_rate", "value": "0.70", "unit": "ratio", "period": "2026-07"},
+        {"alias": "churn_rate", "name": "logo_churn_rate", "value": "0.05", "unit": "ratio", "period": "2026-07"}
+      ],
+      "expected": {"status": "calculated", "value": "1400.000000", "display": "1400.00", "unit": "USD", "period": "2026-07", "input_aliases": ["arpa", "gm_rate", "churn_rate"], "warnings": []}
+    },
+    {
+      "metric": "ltv_cac",
+      "formula_version": "ltv_cac@1",
+      "facts": [
+        {"alias": "ltv", "name": "ltv", "value": "1400", "unit": "USD", "period": "2026-Q2"},
+        {"alias": "cac", "name": "cac", "value": "500", "unit": "USD", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "2.800000", "display": "2.80", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["ltv", "cac"], "warnings": []}
+    },
+    {
+      "metric": "cac_payback_months",
+      "formula_version": "cac_payback_months@1",
+      "facts": [
+        {"alias": "cac", "name": "cac", "value": "500", "unit": "USD", "period": "2026-07"},
+        {"alias": "arpa", "name": "monthly_arpa", "value": "100", "unit": "USD/month", "period": "2026-07"},
+        {"alias": "gm_rate", "name": "gross_margin_rate", "value": "0.70", "unit": "ratio", "period": "2026-07"}
+      ],
+      "expected": {"status": "calculated", "value": "7.142857", "display": "7.1", "unit": "months", "period": "2026-07", "input_aliases": ["cac", "arpa", "gm_rate"], "warnings": []}
+    },
+    {
+      "metric": "logo_churn",
+      "formula_version": "logo_churn@1",
+      "facts": [
+        {"alias": "lost", "name": "lost_customers", "value": "10", "unit": "count", "period": "2026-Q2"},
+        {"alias": "opening_customers", "name": "opening_customers", "value": "200", "unit": "count", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "0.050000", "display": "0.0500", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["lost", "opening_customers"], "warnings": []}
+    },
+    {
+      "metric": "revenue_churn",
+      "formula_version": "revenue_churn@1",
+      "facts": [
+        {"alias": "churned_mrr", "name": "churned_mrr", "value": "10000", "unit": "USD/month", "period": "2026-Q2"},
+        {"alias": "opening_mrr", "name": "opening_mrr", "value": "100000", "unit": "USD/month", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "0.100000", "display": "0.1000", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["churned_mrr", "opening_mrr"], "warnings": []}
+    },
+    {
+      "metric": "nrr",
+      "formula_version": "nrr@1",
+      "facts": [
+        {"alias": "opening_mrr", "name": "opening_mrr", "value": "100000", "unit": "USD/month", "period": "2026-Q2"},
+        {"alias": "expansion_mrr", "name": "expansion_mrr", "value": "20000", "unit": "USD/month", "period": "2026-Q2"},
+        {"alias": "contraction_mrr", "name": "contraction_mrr", "value": "5000", "unit": "USD/month", "period": "2026-Q2"},
+        {"alias": "churned_mrr", "name": "churned_mrr", "value": "10000", "unit": "USD/month", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "1.050000", "display": "1.0500", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["opening_mrr", "expansion_mrr", "contraction_mrr", "churned_mrr"], "warnings": []}
+    },
+    {
+      "metric": "burn_multiple",
+      "formula_version": "burn_multiple@1",
+      "facts": [
+        {"alias": "net_burn", "name": "net_burn", "value": "60000", "unit": "USD", "period": "2026-Q2"},
+        {"alias": "net_new_arr", "name": "net_new_arr", "value": "30000", "unit": "USD", "period": "2026-Q2"}
+      ],
+      "expected": {"status": "calculated", "value": "2.000000", "display": "2.00", "unit": "ratio", "period": "2026-Q2", "input_aliases": ["net_burn", "net_new_arr"], "warnings": []}
+    },
+    {
+      "metric": "rule_of_40",
+      "formula_version": "rule_of_40@1",
+      "assumptions": {"business_model": "saas", "stage": "growth"},
+      "facts": [
+        {"alias": "growth", "name": "revenue_growth_rate", "value": "0.25", "unit": "ratio", "period": "2026"},
+        {"alias": "profit_margin", "name": "profit_margin", "value": "-0.10", "unit": "ratio", "period": "2026"}
+      ],
+      "expected": {"status": "calculated", "value": "0.150000", "display": "0.1500", "unit": "ratio", "period": "2026", "input_aliases": ["growth", "profit_margin"], "warnings": []}
+    },
+    {
+      "metric": "cohort_retention",
+      "formula_version": "cohort_retention@1",
+      "facts": [
+        {"alias": "cohort_start", "name": "starting_cohort_customers", "value": "100", "unit": "count", "period": "2026-01", "metadata": {"cohort_id": "saas-2026-01", "cohort_start_period": "2026-01"}},
+        {"alias": "cohort_end", "name": "ending_cohort_customers", "value": "80", "unit": "count", "period": "2026-07", "metadata": {"cohort_id": "saas-2026-01", "cohort_start_period": "2026-01"}}
+      ],
+      "expected": {"status": "calculated", "value": "0.800000", "display": "0.8000", "unit": "ratio", "period": "2026-07", "input_aliases": ["cohort_start", "cohort_end"], "warnings": []}
+    }
+  ]
+}

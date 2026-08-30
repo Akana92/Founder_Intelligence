@@ -1,0 +1,19 @@
+{
+  "domain": "example.co",
+  "license_class": "discovery_metadata_only",
+  "polarity": "neutral",
+  "published_at": "2026-06-30T10:00:00Z",
+  "provenance": {
+    "provider": "gdelt",
+    "provider_version": "doc-api-2.0",
+    "response_hash": "cab1d7d22b452bfcae1d7e67d0ced399e041bb5c9aae9f18f2925db89fac13bf",
+    "source_url": "https://example.co/wire/aapl-market-close"
+  },
+  "publisher": "Example Wire",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "response_hash": "cab1d7d22b452bfcae1d7e67d0ced399e041bb5c9aae9f18f2925db89fac13bf",
+  "snippet": "Market-close context references Apple without asserting canonical numbers.",
+  "source_url": "https://example.co/wire/aapl-market-close",
+  "title": "Apple ends quarter with broad market attention"
+}

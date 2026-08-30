@@ -1,0 +1,7 @@
+{
+  "archive_policy": "safe_members_only",
+  "members": [
+    {"path": "pitch/overview.txt", "format": "text"},
+    {"path": "metrics/traction.csv", "format": "csv"}
+  ]
+}

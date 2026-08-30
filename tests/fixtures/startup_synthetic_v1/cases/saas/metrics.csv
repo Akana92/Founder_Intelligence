@@ -1,0 +1,5 @@
+metric,value,unit,period
+mrr,12000,USD,2026-07
+arr,144000,USD,2026
+gross_margin,0.76,ratio,2026-H1
+net_burn,18000,USD,2026-07

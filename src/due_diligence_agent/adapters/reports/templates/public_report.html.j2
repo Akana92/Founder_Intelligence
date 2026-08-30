@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #1f252b; margin: 32px; }
+    h1 { font-size: 24px; margin-bottom: 4px; }
+    h2 { font-size: 16px; border-bottom: 1px solid #c7d0d9; padding-bottom: 4px; }
+    section { margin: 18px 0; page-break-inside: avoid; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { border: 1px solid #c7d0d9; padding: 6px; text-align: left; }
+    .muted { color: #53616f; }
+    .chart { max-width: 560px; }
+  </style>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <p class="muted">Snapshot {{ snapshot_id }} | {{ as_of }}</p>
+  {% for key, section in sections.items() %}
+  <section id="{{ key }}">
+    <h2>{{ section["title"] }}</h2>
+    {% if section["summary"] %}
+    <p>{{ section["summary"] }}</p>
+    {% endif %}
+    {% if section["items"] %}
+    <ul>
+      {% for item in section["items"] %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if section["rows"] %}
+    <table>
+      <tbody>
+      {% for row in section["rows"] %}
+        <tr>
+        {% for cell in row %}
+          <td>{{ cell }}</td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if section.get("chart_data_uri") %}
+    <img class="chart" alt="{{ section["title"] }} chart" src="{{ section["chart_data_uri"] }}">
+    {% endif %}
+  </section>
+  {% endfor %}
+</body>
+</html>

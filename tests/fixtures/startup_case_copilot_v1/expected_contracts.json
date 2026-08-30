@@ -1,0 +1,308 @@
+{
+  "schema_version": "startup_case_copilot_expected_contracts@1",
+  "dataset": "startup_case_copilot_v1",
+  "contract_version": "task0-red@2",
+  "cases": {
+    "idea_inventory": {
+      "company_name": "SilkStock Planner",
+      "stage": "idea",
+      "expected_next_question": "Уточните экономического покупателя: кто принимает решение об оплате и бюджете.",
+      "expected_question_field": "buyer",
+      "expected_copilot_action": "prepare_public_research",
+      "expected_extracted_facts": [
+        {
+          "field_key": "startup_name",
+          "value": "SilkStock Planner",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "customer_segment",
+          "value": "Central Asian independent retailers and regional distributors",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "buyer",
+          "value": "Operations directors and owner-operators",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "user",
+          "value": "Inventory planners, store managers, and procurement coordinators",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "geography",
+          "value": "Kazakhstan and Uzbekistan",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "launch_window",
+          "value": "Q2 2027 pilot window",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "pricing_revenue_model",
+          "value": "Subscription tied to store or warehouse coverage plus onboarding package hypothesis",
+          "source_type": "founder_statement"
+        }
+      ],
+      "prioritized_gaps": [
+        {
+          "gap_code": "input.missing:monthly_recurring_revenue",
+          "field_key": "monthly_recurring_revenue",
+          "privacy_class": "private_startup_metric",
+          "allowed_action": "manual_fact_intake"
+        },
+        {
+          "gap_code": "input.missing:monthly_net_burn",
+          "field_key": "monthly_net_burn",
+          "privacy_class": "private_startup_metric",
+          "allowed_action": "manual_fact_intake"
+        },
+        {
+          "gap_code": "input.missing:customer_count",
+          "field_key": "customer_count",
+          "privacy_class": "private_startup_metric",
+          "allowed_action": "manual_fact_intake"
+        },
+        {
+          "gap_code": "input.missing:public_pricing_analogs",
+          "field_key": "public_pricing_analogs",
+          "privacy_class": "public_market_context",
+          "allowed_action": "prepare_public_research"
+        }
+      ],
+      "scenario_metrics": [
+        {
+          "metric_key": "monthly_recurring_revenue",
+          "label": "Monthly recurring revenue",
+          "source_type": "ai_scenario",
+          "value": null,
+          "range": {
+            "conservative": null,
+            "base": null,
+            "optimistic": null
+          },
+          "formula": "founder_supplied_mrr_or_accepted_scenario_range",
+          "dependencies": [
+            "pricing_revenue_model",
+            "customer_count",
+            "average_contract_value"
+          ],
+          "unit": "KZT/month",
+          "period": "launch_month",
+          "confidence": "low",
+          "source_refs": [],
+          "what_would_confirm": "Signed pilot contracts or billing records for launch-month subscriptions.",
+          "validation_plan": "Collect founder-declared price, expected paying accounts, period, unit, and source; keep as scenario until evidence is uploaded."
+        }
+      ],
+      "privacy_contract": {
+        "forbidden_metric_categories": [
+          "mrr",
+          "arr",
+          "recognized_revenue",
+          "burn",
+          "cash",
+          "cash_balance",
+          "factual_customer_count"
+        ],
+        "private_research_rejections": [
+          "monthly_recurring_revenue",
+          "annual_recurring_revenue",
+          "recognized_revenue",
+          "monthly_net_burn",
+          "cash",
+          "cash_balance",
+          "customer_count"
+        ]
+      }
+    },
+    "idea_clinic": {
+      "company_name": "CareLoop Recall",
+      "stage": "idea",
+      "expected_next_question": "Уточните экономического покупателя: кто принимает решение об оплате и бюджете.",
+      "expected_question_field": "buyer",
+      "expected_copilot_action": "prepare_public_research",
+      "expected_extracted_facts": [
+        {
+          "field_key": "startup_name",
+          "value": "CareLoop Recall",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "customer_segment",
+          "value": "Outpatient clinics",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "buyer",
+          "value": "Clinic administrators and medical directors",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "user",
+          "value": "Nurses, front-desk coordinators, and care managers",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "geography",
+          "value": "Georgia and Armenia",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "launch_constraint",
+          "value": "Patient-consent language, clinic staff workflow, and data-retention rules must be reviewed",
+          "source_type": "source_fact"
+        },
+        {
+          "field_key": "pricing_revenue_model",
+          "value": "Monthly service package, per-active-patient model, or setup fee hypothesis",
+          "source_type": "founder_statement"
+        }
+      ],
+      "prioritized_gaps": [
+        {
+          "gap_code": "input.missing:monthly_recurring_revenue",
+          "field_key": "monthly_recurring_revenue",
+          "privacy_class": "private_startup_metric",
+          "allowed_action": "manual_fact_intake"
+        },
+        {
+          "gap_code": "input.missing:cash_balance",
+          "field_key": "cash_balance",
+          "privacy_class": "private_startup_metric",
+          "allowed_action": "manual_fact_intake"
+        },
+        {
+          "gap_code": "input.missing:customer_count",
+          "field_key": "customer_count",
+          "privacy_class": "private_startup_metric",
+          "allowed_action": "manual_fact_intake"
+        },
+        {
+          "gap_code": "input.missing:regulatory_context",
+          "field_key": "regulatory_context",
+          "privacy_class": "public_market_context",
+          "allowed_action": "prepare_public_research"
+        }
+      ],
+      "scenario_metrics": [
+        {
+          "metric_key": "monthly_recurring_revenue",
+          "label": "Monthly recurring revenue",
+          "source_type": "ai_scenario",
+          "value": null,
+          "range": {
+            "conservative": null,
+            "base": null,
+            "optimistic": null
+          },
+          "formula": "founder_supplied_mrr_or_accepted_scenario_range",
+          "dependencies": [
+            "pricing_revenue_model",
+            "active_clinic_count",
+            "average_contract_value"
+          ],
+          "unit": "USD/month",
+          "period": "launch_month",
+          "confidence": "low",
+          "source_refs": [],
+          "what_would_confirm": "Signed clinic pilots or billing records for launch-month service fees.",
+          "validation_plan": "Collect founder-declared clinic count, price basis, period, unit, and source; keep as scenario until evidence is uploaded."
+        }
+      ],
+      "privacy_contract": {
+        "forbidden_metric_categories": [
+          "mrr",
+          "arr",
+          "recognized_revenue",
+          "burn",
+          "cash",
+          "cash_balance",
+          "factual_customer_count"
+        ],
+        "private_research_rejections": [
+          "monthly_recurring_revenue",
+          "annual_recurring_revenue",
+          "recognized_revenue",
+          "monthly_net_burn",
+          "cash",
+          "cash_balance",
+          "customer_count"
+        ]
+      }
+    }
+  },
+  "scenario_contract": {
+    "fact_coverage": "evidence-backed understanding of the real project",
+    "scenario_completeness": "accepted planning-model completeness",
+    "must_remain_distinct": true,
+    "required_metric_fields": [
+      "metric_key",
+      "label",
+      "source_type",
+      "value",
+      "range",
+      "formula",
+      "dependencies",
+      "unit",
+      "period",
+      "confidence",
+      "source_refs",
+      "what_would_confirm",
+      "validation_plan"
+    ]
+  },
+  "source_type_contract": {
+    "source_fact": {
+      "accepted_status": "confirmed",
+      "may_be_created_from_acceptance_only": false
+    },
+    "founder_statement": {
+      "accepted_status": "provisional",
+      "may_promote_to_source_fact": false
+    },
+    "public_benchmark": {
+      "accepted_status": "external_context",
+      "may_promote_to_source_fact": false
+    },
+    "deterministic_calculation": {
+      "accepted_status": "calculated",
+      "may_promote_to_source_fact": false
+    },
+    "ai_scenario": {
+      "accepted_status": "planning_assumption",
+      "may_promote_to_source_fact": false
+    },
+    "contradiction": {
+      "accepted_status": "conflict_open",
+      "may_promote_to_source_fact": false
+    }
+  },
+  "research_contract": {
+    "copilot_action": "prepare_public_research",
+    "plan_endpoint": "/api/v1/startup/cases/{case_id}/research/plans",
+    "job_endpoint": "/api/v1/startup/cases/{case_id}/research/jobs",
+    "private_plan_rejection_code": "private_public_research_rejected",
+    "allowed_public_focus_keys": [
+      "market",
+      "icp",
+      "competitors",
+      "alternatives",
+      "channels",
+      "public_pricing_analogs",
+      "unit_economics_benchmarks",
+      "regulatory_context"
+    ],
+    "private_focus_keys": [
+      "monthly_recurring_revenue",
+      "annual_recurring_revenue",
+      "recognized_revenue",
+      "monthly_net_burn",
+      "cash",
+      "cash_balance",
+      "customer_count"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "domain": "restricted.example",
+  "license_class": "research_only",
+  "published_at": "2026-06-28T08:00:00Z",
+  "publisher": "Restricted Example",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "snippet": "Restricted source snippet retained only as provider metadata.",
+  "source_url": "https://restricted.example/aapl/body",
+  "title": "Restricted Apple article body is not retained"
+}

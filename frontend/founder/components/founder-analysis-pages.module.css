@@ -1,0 +1,2712 @@
+.page {
+  --analysis-panel: rgba(31, 31, 33, 0.78);
+  --analysis-panel-soft: rgba(255, 255, 255, 0.045);
+  --analysis-border: var(--fi-border);
+  --analysis-border-hot: rgba(245, 161, 207, 0.48);
+  --analysis-text: var(--fi-text);
+  --analysis-muted: var(--fi-muted);
+  --analysis-faint: rgba(251, 247, 249, 0.64);
+  --analysis-pink: var(--fi-accent);
+  --analysis-green: var(--fi-success);
+  --analysis-amber: var(--fi-warning);
+  --analysis-blue: #8db3ff;
+  color: var(--analysis-text);
+  display: grid;
+  gap: 14px;
+}
+
+.hero {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 50px;
+  padding: 0 4px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 2.15vw, 38px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  margin: 0 0 6px;
+}
+
+.hero p {
+  color: var(--analysis-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--analysis-pink);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroAside {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--analysis-muted);
+  display: flex;
+  gap: 14px;
+  justify-content: end;
+  padding: 0;
+}
+
+.heroAside > span,
+.heroAside > strong {
+  display: none;
+}
+
+.glassPanel,
+.gateCard,
+.metricCard,
+.searchStatus,
+.safeBanner,
+.addDataStrip {
+  background:
+    radial-gradient(circle at 84% 0%, rgba(245, 161, 207, 0.13), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+    var(--analysis-panel);
+  border: 1px solid var(--analysis-border);
+  border-radius: 16px;
+  box-shadow: 0 16px 54px rgba(0, 0, 0, 0.2);
+}
+
+.statusPill,
+.pinkButton,
+.outlineButton,
+.backgroundButton,
+.projectSelect {
+  align-items: center;
+  border-radius: 16px;
+  display: inline-flex;
+  font-weight: 800;
+  gap: 10px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.statusPill {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--analysis-border);
+  color: var(--analysis-text);
+  min-height: 48px;
+  padding: 0 28px;
+}
+
+.backgroundButton {
+  background: transparent;
+  border: 1px solid var(--analysis-border);
+  color: var(--analysis-text);
+  min-height: 48px;
+  padding: 0 24px;
+}
+
+.pinkButton,
+.outlineButton {
+  border: 1px solid transparent;
+  cursor: pointer;
+  min-height: 48px;
+  padding: 0 22px;
+}
+
+.pinkButton {
+  background: linear-gradient(135deg, #f5a1cf, #e78cc4);
+  box-shadow: 0 0 34px rgba(245, 161, 207, 0.2);
+  color: #211119;
+  font-size: 17px;
+}
+
+.outlineButton {
+  background: transparent;
+  border-color: transparent;
+  color: var(--analysis-pink);
+}
+
+.pinkButton:disabled,
+.outlineButton:disabled,
+.backgroundButton:disabled,
+.projectSelect:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  filter: saturate(0.45);
+  opacity: 0.4;
+  transform: none;
+}
+
+.progressRail {
+  align-items: center;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+    var(--analysis-panel);
+  border: 1px solid var(--analysis-border);
+  border-radius: 18px;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  min-height: 96px;
+  overflow: hidden;
+  padding: 12px 30px;
+}
+
+.railStep {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  min-height: 72px;
+  padding: 0;
+  position: relative;
+}
+
+.railStep:not(:last-child)::after {
+  background: linear-gradient(90deg, rgba(139, 217, 140, 0.85), rgba(245, 161, 207, 0.5), rgba(255, 255, 255, 0.18));
+  block-size: 2px;
+  content: "";
+  inline-size: calc(100% - 60px);
+  inset-block-start: 18px;
+  inset-inline-start: calc(50% + 30px);
+  position: absolute;
+}
+
+.railStep span {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: var(--analysis-muted);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  inline-size: 38px;
+  justify-content: center;
+  min-block-size: 38px;
+}
+
+.railStep strong {
+  color: var(--analysis-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.isDone span {
+  background: rgba(139, 217, 140, 0.72);
+  color: #f8fff7;
+}
+
+.isActive span {
+  background: var(--analysis-pink);
+  color: #190d13;
+}
+
+.isActive strong {
+  color: var(--analysis-pink);
+}
+
+.progressLayout {
+  align-items: start;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(500px, 0.92fr) minmax(0, 1.08fr);
+}
+
+.gateColumn {
+  display: grid;
+  gap: 10px;
+  min-inline-size: 0;
+}
+
+.overviewGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 0.95fr) minmax(320px, 0.85fr);
+}
+
+.metricsGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(430px, 0.92fr);
+}
+
+.agentPanel,
+.gateCard,
+.profileMap,
+.aiSuggestion,
+.financePanel,
+.financialProblem {
+  padding: 20px;
+}
+
+.agentPanel h2,
+.profileMap h2,
+.addDataStrip h2,
+.financePanel h2,
+.financialProblem h2 {
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.agentTimeline,
+.evidenceList {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.agentRow {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--analysis-border);
+  border-radius: 18px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 48px minmax(0, 1fr) 116px;
+  min-height: 68px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.agentRow > div:not(.iconBubble) {
+  display: grid;
+  gap: 3px;
+  min-inline-size: 0;
+}
+
+.agentRow strong,
+.agentRow span {
+  display: block;
+  line-height: 1.16;
+}
+
+.agentRow strong,
+.evidenceItem strong,
+.suggestionRow strong,
+.metricCard strong {
+  color: var(--analysis-text);
+}
+
+.agentRow span,
+.evidenceItem span,
+.metricCard p,
+.glassPanel p {
+  color: var(--analysis-muted);
+}
+
+.agentRow em {
+  background: rgba(139, 217, 140, 0.12);
+  border-radius: 999px;
+  color: var(--analysis-green);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  justify-self: end;
+  padding: 6px 9px;
+  text-align: center;
+}
+
+.activeAgentRow {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(245, 161, 207, 0.18), transparent 34%),
+    rgba(255, 255, 255, 0.055);
+  border-color: var(--analysis-border-hot);
+  box-shadow: inset 0 0 30px rgba(245, 161, 207, 0.08);
+}
+
+.gateTitle,
+.panelHead {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.gateBadge {
+  align-items: center;
+  border: 2px solid var(--analysis-pink);
+  border-radius: 999px;
+  color: var(--analysis-pink);
+  display: inline-flex;
+  justify-content: center;
+  min-block-size: 52px;
+  min-inline-size: 52px;
+  position: relative;
+}
+
+.gateBadge b {
+  color: var(--analysis-text);
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+}
+
+.gateTitle h2 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  margin: 4px 0 0;
+}
+
+.gateProfile {
+  display: grid;
+  margin: 16px 0 14px;
+}
+
+.gateProfile div {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 150px minmax(0, 1fr);
+  min-height: 44px;
+}
+
+.gateProfile dt {
+  color: var(--analysis-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gateProfile dd {
+  color: var(--analysis-text);
+  margin: 0;
+}
+
+.gateConfidence {
+  color: var(--analysis-green) !important;
+  font-weight: 800;
+  justify-self: end;
+}
+
+.gateReceipt,
+.gatePrerequisite {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+}
+
+.gateReceipt {
+  align-items: center;
+  color: var(--analysis-text);
+  display: grid;
+  gap: 4px 10px;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.gateReceipt svg {
+  color: var(--analysis-green);
+  grid-row: span 2;
+}
+
+.gateReceipt small,
+.gatePrerequisite {
+  color: var(--analysis-muted);
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+
+.gatePrerequisite {
+  background: rgba(245, 161, 207, 0.08);
+}
+
+.actionStrip {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.actionStrip .pinkButton {
+  flex: 1 1 100%;
+}
+
+.actionStrip .outlineButton {
+  flex: 1 1 180px;
+}
+
+.searchStatus,
+.safeBanner {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-height: 56px;
+  padding: 10px 20px;
+}
+
+.safeBanner {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.readinessTop {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1.58fr) minmax(300px, 0.71fr) minmax(300px, 0.71fr);
+}
+
+.readinessTop > * {
+  min-height: 190px;
+}
+
+.overviewHeroActions {
+  align-items: center;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(520px, 0.72fr);
+}
+
+.overviewHeroActions .outlineButton {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: var(--analysis-border);
+  color: var(--analysis-text);
+  justify-content: space-between;
+}
+
+.overviewChips {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+
+.growthStagePill,
+.updatedBadge {
+  align-items: center;
+  border: 1px solid var(--analysis-border);
+  border-radius: 16px;
+  display: inline-flex;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.growthStagePill {
+  border-color: var(--analysis-border-hot);
+  color: var(--analysis-pink);
+  min-height: 38px;
+}
+
+.updatedBadge {
+  color: var(--analysis-faint);
+  min-height: 38px;
+}
+
+.readinessGauge,
+.circleMetric {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.circleMetric {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.circleMetricBody {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 82px minmax(0, 1fr);
+  min-block-size: 0;
+}
+
+.gaugeArc {
+  aspect-ratio: 2 / 1;
+  display: grid;
+  inline-size: min(100%, 300px);
+  justify-self: center;
+  min-height: 0;
+  place-items: center;
+  position: relative;
+}
+
+.gaugeArc strong,
+.bigScore strong {
+  color: var(--analysis-pink);
+  font-size: 38px;
+  letter-spacing: -0.06em;
+}
+
+.circleMetricBody {
+  align-items: center;
+  color: var(--analysis-pink);
+}
+
+.circleMetricCopy {
+  display: grid;
+  gap: 6px;
+  min-inline-size: 0;
+}
+
+.circleMetricCopy strong {
+  color: var(--analysis-pink);
+  font-size: 24px;
+}
+
+.circleMetricCopy p {
+  color: var(--analysis-muted);
+  font-size: 12px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.circularMetricRing {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  inline-size: 78px;
+  justify-content: center;
+  min-block-size: 78px;
+  position: relative;
+}
+
+.profileMap {
+  min-height: 300px;
+}
+
+.evidenceItem {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--analysis-border);
+  border-radius: 14px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  min-height: 72px;
+  padding: 10px;
+}
+
+.evidenceItem > div {
+  display: grid;
+  gap: 4px;
+  min-inline-size: 0;
+}
+
+.evidenceItem strong,
+.evidenceItem span {
+  display: block;
+  line-height: 1.2;
+}
+
+.evidenceItem em {
+  color: var(--analysis-pink);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.aiSuggestion {
+  border-color: var(--analysis-border-hot);
+  box-shadow: 0 0 48px rgba(245, 161, 207, 0.26);
+  display: grid;
+  gap: 12px;
+}
+
+.suggestionRow {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--analysis-border);
+  border-radius: 14px;
+  color: var(--analysis-text);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-height: 64px;
+  padding: 10px 12px;
+}
+
+.suggestionRow svg {
+  color: var(--analysis-pink);
+}
+
+.suggestionRow em {
+  color: var(--analysis-pink);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+  grid-column: 2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.addDataStrip {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.addDataStrip > div {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.addDataStrip button {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--analysis-border);
+  border-radius: 14px;
+  color: var(--analysis-text);
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.addDataStrip button span,
+.addDataStrip button div,
+.addDataCtaPane {
+  display: grid;
+  gap: 3px;
+  min-inline-size: 0;
+}
+
+.addDataCtaPane {
+  border-inline-start: 1px dashed rgba(245, 161, 207, 0.38);
+  min-height: 54px;
+  padding-inline-start: 22px;
+}
+
+.addDataCtaPane .pinkButton {
+  width: 100%;
+}
+
+.metricsToolbar {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 220px max-content;
+  justify-content: start;
+}
+
+.projectSelect {
+  background: transparent;
+  border: 1px solid var(--analysis-border);
+  color: var(--analysis-pink);
+  min-height: 42px;
+  padding: 0 18px;
+}
+
+.addDataStrip button strong,
+.addDataStrip button em {
+  display: block;
+  line-height: 1.18;
+}
+
+.metricCardsTop {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metricCard {
+  display: grid;
+  gap: 8px;
+  min-height: 170px;
+  padding: 18px;
+}
+
+.metricCard strong {
+  color: var(--analysis-pink);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.metricCard em {
+  color: var(--analysis-pink);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.metricStatus {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 12px;
+  display: inline-flex;
+  font-size: 13px;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  width: fit-content;
+}
+
+.metricStatus_green {
+  background: rgba(139, 217, 140, 0.1);
+  color: var(--analysis-green);
+}
+
+.metricStatus_amber {
+  background: rgba(255, 183, 64, 0.1);
+  color: var(--analysis-amber);
+}
+
+.metricStatus_pink {
+  background: rgba(245, 161, 207, 0.1);
+  color: var(--analysis-pink);
+}
+
+.metricStatus_needs {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--analysis-muted);
+}
+
+.sparkline {
+  align-items: end;
+  display: flex;
+  gap: 5px;
+  min-height: 28px;
+}
+
+.sparkline i {
+  background: linear-gradient(180deg, var(--analysis-pink), rgba(245, 161, 207, 0.12));
+  border-radius: 999px 999px 3px 3px;
+  flex: 1;
+}
+
+.financePanel {
+  display: grid;
+  gap: 12px;
+}
+
+.panelHead {
+  justify-content: space-between;
+}
+
+.periodPills {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.periodPill {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--analysis-border);
+  border-radius: 12px;
+  color: var(--analysis-muted);
+  font-size: 14px;
+  min-height: 36px;
+  min-width: 56px;
+}
+
+.periodPillActive {
+  background: rgba(245, 161, 207, 0.11);
+  border-color: var(--analysis-border-hot);
+  color: var(--analysis-pink);
+}
+
+.chartCard {
+  background:
+    radial-gradient(circle at 60% 12%, rgba(245, 161, 207, 0.14), transparent 34%),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--analysis-border);
+  border-radius: 16px;
+  min-height: 330px;
+  padding: 20px;
+  position: relative;
+}
+
+.chartGrid {
+  color: var(--analysis-muted);
+  display: grid;
+  font-size: 13px;
+  gap: 18px;
+}
+
+.chartLine {
+  inset: 48px 28px 58px 82px;
+  position: absolute;
+}
+
+.chartLine i {
+  background: var(--analysis-pink);
+  border-radius: 999px;
+  display: block;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.chartLine em {
+  color: var(--analysis-muted);
+  font-size: 12px;
+  font-style: normal;
+  position: absolute;
+  top: 172px;
+  transform: translateX(-8px);
+}
+
+.chartLine i:nth-child(1) { left: 0%; }
+.chartLine i:nth-child(2) { left: 18%; }
+.chartLine i:nth-child(3) { left: 36%; }
+.chartLine i:nth-child(4) { left: 54%; }
+.chartLine i:nth-child(5) { left: 72%; }
+.chartLine i:nth-child(6) { left: 90%; }
+
+.chartCard p {
+  bottom: 16px;
+  color: var(--analysis-muted);
+  left: 18px;
+  position: absolute;
+}
+
+.mrrLineChart {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  min-height: 292px;
+  position: relative;
+}
+
+.yAxisLabels {
+  color: var(--analysis-muted);
+  display: grid;
+  font-size: 13px;
+  padding: 10px 0 48px;
+}
+
+.yAxisLabel {
+  align-self: start;
+}
+
+.chartPlot {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.09) 0,
+      rgba(255, 255, 255, 0.09) 1px,
+      transparent 1px,
+      transparent 25%
+    );
+  border-block-end: 1px solid rgba(255, 255, 255, 0.14);
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.14);
+  margin: 10px 8px 48px 0;
+  min-height: 216px;
+  position: relative;
+}
+
+.chartPointWrap {
+  display: contents;
+}
+
+.lineSegment {
+  background: var(--analysis-pink);
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(245, 161, 207, 0.4);
+  height: 3px;
+  left: var(--line-left);
+  position: absolute;
+  bottom: var(--line-bottom);
+  transform: rotate(var(--line-rotate));
+  transform-origin: left center;
+  width: var(--line-width);
+}
+
+.linePoint {
+  background: var(--analysis-pink);
+  border: 3px solid #2f1d27;
+  border-radius: 999px;
+  box-shadow: 0 0 24px rgba(245, 161, 207, 0.6);
+  height: 14px;
+  left: var(--point-left);
+  position: absolute;
+  bottom: var(--point-bottom);
+  transform: translate(-50%, 50%);
+  width: 14px;
+  z-index: 2;
+}
+
+.xAxisLabel {
+  color: var(--analysis-muted);
+  font-size: 13px;
+  font-style: normal;
+  left: var(--label-left);
+  position: absolute;
+  top: calc(100% + 18px);
+  transform: translateX(-50%);
+}
+
+.chartFootnote {
+  grid-column: 1 / -1;
+  margin: 0;
+  position: static !important;
+}
+
+.emptyChartState {
+  align-content: center;
+  color: var(--analysis-muted);
+  display: grid;
+  gap: 11px;
+  justify-items: center;
+  min-height: 236px;
+  text-align: center;
+}
+
+.emptyChartSkeleton {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(245, 161, 207, 0.12), transparent 34%),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) 0,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px,
+      transparent 26px
+    ),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: inset 0 0 34px rgba(245, 161, 207, 0.08);
+  inline-size: min(100%, 520px);
+  min-height: 118px;
+  overflow: hidden;
+  position: relative;
+}
+
+.emptyChartBaseline {
+  background: linear-gradient(90deg, transparent, rgba(245, 161, 207, 0.58), transparent);
+  block-size: 2px;
+  border-radius: 999px;
+  inline-size: 78%;
+  inset-block-end: 32px;
+  inset-inline-start: 11%;
+  position: absolute;
+}
+
+.emptyChartGhostPoints i {
+  background: var(--analysis-pink);
+  border: 3px solid rgba(43, 31, 39, 0.96);
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(245, 161, 207, 0.44);
+  block-size: 12px;
+  inset-block-end: 27px;
+  inline-size: 12px;
+  opacity: 0.78;
+  position: absolute;
+}
+
+.emptyChartGhostPoints i:nth-child(1) { left: 18%; }
+.emptyChartGhostPoints i:nth-child(2) { left: 38%; }
+.emptyChartGhostPoints i:nth-child(3) { left: 59%; }
+.emptyChartGhostPoints i:nth-child(4) { left: 78%; }
+
+.emptyChartState strong {
+  color: var(--analysis-text);
+  font-size: 18px;
+  line-height: 1.16;
+}
+
+.emptyChartState p {
+  color: var(--analysis-muted);
+  line-height: 1.35;
+  margin: 0 auto;
+  max-inline-size: 520px;
+  position: static;
+}
+
+.financialProblem {
+  border-color: var(--analysis-border-hot);
+  box-shadow: 0 0 34px rgba(245, 161, 207, 0.22);
+  display: grid;
+  gap: 10px;
+}
+
+.problemLabel {
+  color: var(--analysis-muted);
+  font-size: 15px;
+}
+
+.problemActions {
+  display: grid;
+  gap: 8px;
+}
+
+.problemAction {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--analysis-border);
+  border-radius: 12px;
+  color: var(--analysis-text);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-height: 42px;
+  padding: 10px 12px;
+}
+
+.templateButton {
+  border-color: var(--analysis-border);
+}
+
+.legend {
+  color: var(--analysis-muted);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.legendItem {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.legendIcon {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.legendCopy {
+  align-items: baseline;
+  display: flex;
+  gap: 9px;
+  margin: 0;
+  min-inline-size: 0;
+}
+
+.legendCopy strong,
+.legendCopy small {
+  font: inherit;
+}
+
+.legendCopy strong {
+  color: currentColor;
+}
+
+.legendCopy small {
+  color: var(--analysis-muted);
+}
+
+.iconBubble {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  min-block-size: 48px;
+  min-inline-size: 48px;
+}
+
+.tone_pink { color: var(--analysis-pink); }
+.tone_green { color: var(--analysis-green); }
+.tone_amber { color: var(--analysis-amber); }
+.tone_blue { color: var(--analysis-blue); }
+.tone_muted { color: var(--analysis-muted); }
+
+.page[data-founder-analysis-page="progress-gate2"] .progressRail {
+  min-height: 114px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .heroAside > .statusPill {
+  display: inline-flex;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow em {
+  white-space: nowrap;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .tone_green {
+  background: rgba(139, 217, 140, 0.14);
+  box-shadow: inset 0 0 18px rgba(139, 217, 140, 0.08);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .tone_pink {
+  background: rgba(245, 161, 207, 0.16);
+  box-shadow: inset 0 0 18px rgba(245, 161, 207, 0.1);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .tone_muted {
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentPanel {
+  min-height: 638px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentTimeline {
+  align-content: space-between;
+  min-height: 550px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 556px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateCard .actionStrip {
+  margin-top: auto;
+}
+
+.progressGate2Shell {
+  --fi-sidebar-width: 254px;
+  --fi-content-gap: 28px;
+  background:
+    radial-gradient(ellipse 52% 30% at 78% 0%, rgba(255, 255, 255, 0.075), transparent 72%),
+    linear-gradient(116deg, #070708 0%, #0a0a0b 58%, #100c0f 100%);
+  padding-right: 34px;
+}
+
+.progressGate2Shell :global(.founder-sidebar) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.022), transparent 28%),
+    rgba(4, 4, 5, 0.96);
+  border-color: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 26px 72px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  min-height: calc(100vh - 34px);
+  padding-top: 30px;
+}
+
+.progressGate2Shell :global(.founder-sidebar__brand) {
+  font-weight: 500;
+  margin-bottom: 42px;
+}
+
+.progressGate2Shell :global(.founder-sidebar__nav button),
+.progressGate2Shell :global(.founder-sidebar__footer button) {
+  color: rgba(244, 239, 242, 0.82);
+  font-weight: 400;
+  min-height: 54px;
+}
+
+.progressGate2Shell :global(.founder-sidebar__nav button.is-active) {
+  background: linear-gradient(90deg, rgba(239, 156, 204, 0.23), rgba(239, 156, 204, 0.1));
+  border-color: rgba(239, 156, 204, 0.22);
+  box-shadow: inset 1px 0 0 #ef9ccc;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] {
+  --analysis-panel: rgba(16, 17, 18, 0.94);
+  --analysis-panel-soft: rgba(255, 255, 255, 0.035);
+  --analysis-border: rgba(255, 255, 255, 0.135);
+  --analysis-border-hot: rgba(239, 156, 204, 0.52);
+  --analysis-text: #f5f1f3;
+  --analysis-muted: #aaa4a8;
+  --analysis-faint: #c9c2c6;
+  --analysis-pink: #ef9ccc;
+  --analysis-green: #79ca80;
+  --analysis-amber: #e2af4a;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  gap: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .hero {
+  min-height: 76px;
+  padding: 8px 0 4px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .hero .eyebrow {
+  display: none;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .hero h1 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 7px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .hero p {
+  color: rgba(230, 223, 227, 0.68);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .heroAside {
+  gap: 18px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .statusPill,
+.page[data-founder-analysis-page="progress-gate2"] .backgroundButton {
+  background: rgba(7, 7, 8, 0.7);
+  border-color: rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 48px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .statusPill {
+  padding: 0 22px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .statusPill svg {
+  color: var(--analysis-pink);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .backgroundButton {
+  padding: 0 24px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .backgroundButton:disabled {
+  color: rgba(245, 241, 243, 0.76);
+  filter: none;
+  opacity: 0.62;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .progressRail {
+  background:
+    radial-gradient(circle at 50% -70%, rgba(255, 255, 255, 0.07), transparent 58%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01)),
+    rgba(16, 17, 18, 0.94);
+  border-color: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.028);
+  padding: 12px 28px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep {
+  gap: 9px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep:not(:last-child)::after {
+  background: rgba(255, 255, 255, 0.16);
+  block-size: 1px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isDone:not(.isBeforeActive)::after {
+  background: rgba(121, 202, 128, 0.9);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isBeforeActive::after {
+  background: linear-gradient(90deg, rgba(121, 202, 128, 0.92), rgba(239, 156, 204, 0.86));
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isActive::after {
+  background: linear-gradient(90deg, rgba(239, 156, 204, 0.76), rgba(255, 255, 255, 0.16));
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep span {
+  background: rgba(15, 15, 17, 0.94);
+  border-color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep strong {
+  color: rgba(229, 223, 226, 0.68);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isDone span {
+  background: rgba(105, 177, 112, 0.88);
+  border-color: rgba(153, 224, 158, 0.28);
+  box-shadow: 0 7px 18px rgba(72, 129, 77, 0.22);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isDone strong {
+  color: rgba(245, 241, 243, 0.9);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isActive span {
+  background: linear-gradient(180deg, #f4a9d2, #eb8fc4);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 20px rgba(239, 156, 204, 0.22);
+  color: #180d13;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .railStep.isActive strong {
+  color: var(--analysis-pink);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .progressLayout {
+  grid-template-columns: minmax(470px, 0.78fr) minmax(0, 1fr);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .glassPanel,
+.page[data-founder-analysis-page="progress-gate2"] .searchStatus,
+.page[data-founder-analysis-page="progress-gate2"] .safeBanner {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(239, 156, 204, 0.055), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.009)),
+    rgba(16, 17, 18, 0.95);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentPanel h2 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentTimeline {
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentTimeline::before {
+  border-inline-start: 1px dashed rgba(198, 184, 192, 0.34);
+  content: "";
+  inset-block: 37px;
+  inset-inline-start: -7px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow {
+  background: rgba(255, 255, 255, 0.024);
+  border-color: rgba(255, 255, 255, 0.13);
+  border-radius: 15px;
+  gap: 12px;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  min-height: 74px;
+  padding: 9px 14px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow strong {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow > div > span {
+  color: rgba(221, 214, 218, 0.7);
+  font-size: 13.5px;
+  line-height: 1.25;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow em {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.055);
+  color: rgba(240, 235, 238, 0.78);
+  display: inline-flex;
+  font-size: 12.5px;
+  font-weight: 400;
+  gap: 6px;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow em[data-tone="green"] {
+  background: rgba(121, 202, 128, 0.12);
+  color: #85d78b;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow em[data-tone="pink"] {
+  background: rgba(239, 156, 204, 0.13);
+  color: #f2a6d1;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow em[data-tone="muted"] {
+  background: rgba(255, 255, 255, 0.065);
+  color: rgba(238, 232, 235, 0.75);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRouteNode {
+  background: #5e5b5d;
+  border: 2px solid #171719;
+  border-radius: 999px;
+  block-size: 9px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  display: block;
+  inline-size: 9px;
+  inset-block-start: 37px;
+  inset-inline-start: -7px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRouteNode[data-route-tone="complete"] {
+  background: #72c67a;
+  box-shadow: 0 0 0 1px rgba(121, 202, 128, 0.2), 0 0 11px rgba(121, 202, 128, 0.3);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRouteNode[data-route-tone="active"] {
+  background: #ef9ccc;
+  box-shadow: 0 0 0 1px rgba(239, 156, 204, 0.22), 0 0 12px rgba(239, 156, 204, 0.38);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRouteNode[data-route-tone="queued"] {
+  background: #4d4b4d;
+  border-color: #171719;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .iconBubble {
+  align-items: center;
+  block-size: 48px;
+  border-color: rgba(255, 255, 255, 0.34);
+  box-sizing: border-box;
+  color: rgba(247, 241, 244, 0.88);
+  display: inline-flex;
+  inline-size: 48px;
+  justify-content: center;
+  line-height: 0;
+  padding: 0;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .iconBubble svg {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .tone_green {
+  background: rgba(104, 159, 110, 0.28);
+  border-color: rgba(151, 214, 156, 0.62);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .tone_pink {
+  background: linear-gradient(145deg, rgba(239, 156, 204, 0.5), rgba(121, 80, 105, 0.38));
+  border-color: rgba(248, 182, 219, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.13);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .tone_muted {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .agentIcon_document {
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.16), transparent 42%),
+    linear-gradient(145deg, rgba(104, 75, 94, 0.86), rgba(49, 38, 46, 0.94));
+  border-color: rgba(230, 167, 204, 0.38);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.11), 0 7px 17px rgba(0, 0, 0, 0.2);
+  color: #f3afd4;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .agentIcon_profile {
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.18), transparent 40%),
+    linear-gradient(145deg, rgba(178, 111, 150, 0.72), rgba(82, 53, 70, 0.92));
+  border-color: rgba(244, 175, 214, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.13), 0 7px 17px rgba(0, 0, 0, 0.2);
+  color: #ffd1ea;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .agentIcon_metrics {
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.34), transparent 40%),
+    linear-gradient(145deg, #ef9ccc, #cf679f);
+  border-color: rgba(255, 208, 234, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 8px 20px rgba(207, 103, 159, 0.28);
+  color: #fff7fb;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .agentIcon_market {
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.14), transparent 42%),
+    linear-gradient(145deg, rgba(127, 101, 62, 0.8), rgba(55, 47, 37, 0.94));
+  border-color: rgba(220, 181, 113, 0.38);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 7px 17px rgba(0, 0, 0, 0.2);
+  color: #fff4dc;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .agentIcon_risk {
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.16), transparent 42%),
+    linear-gradient(145deg, rgba(133, 134, 134, 0.74), rgba(57, 58, 59, 0.94));
+  border-color: rgba(221, 223, 224, 0.38);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.11), 0 7px 17px rgba(0, 0, 0, 0.2);
+  color: #f4f4f2;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentRow .agentIcon_gtm {
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.18), transparent 42%),
+    linear-gradient(145deg, rgba(143, 144, 144, 0.72), rgba(62, 63, 64, 0.94));
+  border-color: rgba(225, 227, 228, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.11), 0 7px 17px rgba(0, 0, 0, 0.2);
+  color: #f7f7f5;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .activeAgentRow {
+  background:
+    radial-gradient(circle at 6% 50%, rgba(239, 156, 204, 0.2), transparent 42%),
+    linear-gradient(90deg, rgba(239, 156, 204, 0.09), rgba(255, 255, 255, 0.035));
+  border-color: rgba(239, 156, 204, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 28px rgba(0, 0, 0, 0.16);
+  min-height: 108px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentProgress {
+  align-items: center;
+  display: grid;
+  gap: 6px 10px;
+  grid-column: 2 / -1;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: -2px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentProgress > span:first-child,
+.page[data-founder-analysis-page="progress-gate2"] .agentProgress > strong {
+  color: rgba(238, 230, 234, 0.74);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentProgressTrack {
+  background: rgba(255, 255, 255, 0.075);
+  block-size: 5px;
+  border-radius: 999px;
+  display: block;
+  grid-column: 1 / -1;
+  overflow: hidden;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .agentProgressTrack i {
+  background: linear-gradient(90deg, #e788bd, #f2a7d0);
+  block-size: 100%;
+  border-radius: inherit;
+  display: block;
+  inline-size: var(--agent-progress);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateCard {
+  padding: 20px 32px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateTitle {
+  gap: 10px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateTitle .eyebrow {
+  display: none;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateBadge {
+  border: 0;
+  border-radius: 0;
+  min-block-size: 54px;
+  min-inline-size: 54px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateBadge svg {
+  color: var(--analysis-pink);
+  height: 52px;
+  width: 52px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateBadge b {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateTitle h2 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateProfile {
+  margin: 16px 0 14px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateProfile div {
+  grid-template-columns: 140px minmax(0, 1fr);
+  min-height: 44px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateProfile dt,
+.page[data-founder-analysis-page="progress-gate2"] .gateProfile dd {
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .gateConfidence {
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .actionStrip .pinkButton {
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(239, 156, 204, 0.17), inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  font-size: 18px;
+  font-weight: 400;
+  min-height: 60px;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .actionStrip .pinkButton svg {
+  inset-inline-end: 24px;
+  position: absolute;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .actionStrip .outlineButton {
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 42px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .searchStatus {
+  font-size: 14px;
+  min-height: 62px;
+  padding: 8px 20px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .searchStatus .iconBubble {
+  min-block-size: 42px;
+  min-inline-size: 42px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .searchStatus strong {
+  color: #83d489;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .searchStatus .outlineButton {
+  min-height: 40px;
+  min-width: 156px;
+  white-space: nowrap;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .safeBanner {
+  min-height: 66px;
+  padding: 10px 24px;
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .safeBannerIcon {
+  color: var(--analysis-pink);
+}
+
+.page[data-founder-analysis-page="progress-gate2"] .safeBanner strong {
+  color: rgba(246, 231, 239, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.page[data-founder-analysis-page="overview"] {
+  --analysis-panel: rgba(18, 18, 20, 0.88);
+  gap: 10px;
+}
+
+.page[data-founder-analysis-page="overview"] .hero {
+  min-height: 50px;
+}
+
+.page[data-founder-analysis-page="overview"] .hero .eyebrow {
+  display: none;
+}
+
+.page[data-founder-analysis-page="overview"] .hero h1 {
+  font-size: clamp(29px, 2vw, 34px);
+  font-weight: 400;
+  line-height: 1.06;
+  margin-bottom: 7px;
+}
+
+.page[data-founder-analysis-page="overview"] .hero p {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewHeroActions {
+  gap: 12px;
+}
+
+.page[data-founder-analysis-page="overview"] .growthStagePill,
+.page[data-founder-analysis-page="overview"] .updatedBadge,
+.page[data-founder-analysis-page="overview"] .overviewHeroActions .outlineButton {
+  min-height: 36px;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewHeroActions .outlineButton {
+  background: linear-gradient(
+    102deg,
+    rgba(255, 255, 255, 0.035),
+    rgba(245, 161, 207, 0.075)
+  );
+  border-color: rgba(245, 161, 207, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 12px 28px rgba(0, 0, 0, 0.18);
+  color: rgba(247, 234, 241, 0.84);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  min-height: 44px;
+  padding: 0 8px 0 16px;
+  transition:
+    background 160ms ease-out,
+    border-color 160ms ease-out,
+    color 160ms ease-out;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewHeroActions .outlineButton:hover:not(:disabled) {
+  background: linear-gradient(
+    102deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(245, 161, 207, 0.11)
+  );
+  border-color: rgba(245, 161, 207, 0.38);
+  color: var(--analysis-text);
+}
+
+.page[data-founder-analysis-page="overview"] .overviewHeroActions .outlineButton:focus-visible {
+  outline: 2px solid var(--analysis-pink);
+  outline-offset: 3px;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewHeroActions .outlineButton > svg:first-child {
+  color: rgba(245, 161, 207, 0.9);
+  flex: 0 0 auto;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewHeroActions .outlineButton > svg:last-child {
+  background: var(--analysis-pink);
+  border-radius: 999px;
+  block-size: 30px;
+  color: #25121c;
+  inline-size: 30px;
+  padding: 7px;
+}
+
+.page[data-founder-analysis-page="overview"] .readinessTop {
+  gap: 10px;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 0.82fr) minmax(0, 0.95fr);
+}
+
+.page[data-founder-analysis-page="overview"] .readinessTop > * {
+  block-size: auto;
+  min-height: 188px;
+  overflow: visible;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 18px 46px rgba(0, 0, 0, 0.24);
+}
+
+.page[data-founder-analysis-page="overview"] .readinessGauge,
+.page[data-founder-analysis-page="overview"] .circleMetric {
+  gap: 6px;
+  padding: 15px 17px;
+}
+
+.page[data-founder-analysis-page="overview"] .readinessGauge {
+  background:
+    radial-gradient(ellipse 58% 72% at 50% 112%, rgba(245, 161, 207, 0.075), transparent 72%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+    var(--analysis-panel);
+  grid-template-rows: auto auto;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="overview"] .readinessGauge > span {
+  color: rgba(251, 247, 249, 0.92);
+  font-family: var(--fi-font);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeStage {
+  display: grid;
+  gap: 8px;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  min-block-size: 0;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeCaption {
+  color: rgba(247, 234, 241, 0.66);
+  font-family: var(--fi-font);
+  font-size: 13px;
+  font-weight: 400;
+  inline-size: min(90%, 330px);
+  letter-spacing: -0.012em;
+  line-height: 1.34;
+  margin: 0;
+  position: static;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeCaption span {
+  display: block;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeCaption span + span {
+  color: rgba(247, 234, 241, 0.82);
+  margin-top: 1px;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeArc {
+  block-size: 146px;
+  inline-size: min(100%, 292px);
+  justify-self: center;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeArc svg {
+  block-size: 100%;
+  inline-size: 100%;
+  inset: 0;
+  overflow: visible;
+  position: absolute;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeTrack {
+  fill: none;
+  stroke: rgba(255, 222, 240, 0.1);
+  stroke-width: 13;
+  vector-effect: non-scaling-stroke;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeProgress {
+  fill: none;
+  filter: drop-shadow(0 7px 12px rgba(245, 161, 207, 0.18));
+  stroke: url("#overview-gauge-progress");
+  stroke-width: 13;
+  vector-effect: non-scaling-stroke;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeValue {
+  align-items: baseline;
+  display: flex;
+  font-family: var(--fi-font);
+  font-variant-numeric: tabular-nums;
+  gap: 7px;
+  inset-block-start: 48px;
+  inset-inline: 0;
+  justify-content: center;
+  position: absolute;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeValue strong {
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.028em;
+  line-height: 1;
+}
+
+.page[data-founder-analysis-page="overview"] .gaugeValue em {
+  color: rgba(247, 234, 241, 0.9);
+  font-size: 17px;
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1;
+}
+
+.page[data-founder-analysis-page="overview"] .circularMetricRing {
+  background: rgba(10, 10, 12, 0.28);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.035),
+    0 12px 26px rgba(0, 0, 0, 0.2);
+  inline-size: 88px;
+  min-block-size: 88px;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="overview"] .circularMetricRing svg {
+  block-size: 100%;
+  inline-size: 100%;
+  inset: 0;
+  overflow: visible;
+  position: absolute;
+}
+
+.page[data-founder-analysis-page="overview"] .donutTrack,
+.page[data-founder-analysis-page="overview"] .donutProgress {
+  fill: none;
+  stroke-width: 7.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.page[data-founder-analysis-page="overview"] .donutTrack {
+  stroke: rgba(255, 255, 255, 0.13);
+}
+
+.page[data-founder-analysis-page="overview"] .donutProgress {
+  filter: drop-shadow(0 5px 10px rgba(245, 161, 207, 0.16));
+  stroke: var(--analysis-pink);
+}
+
+.page[data-founder-analysis-page="overview"] .donutIcon {
+  align-items: center;
+  color: var(--analysis-pink);
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.page[data-founder-analysis-page="overview"] .donutIcon svg {
+  block-size: 32px;
+  inline-size: 32px;
+  position: static;
+}
+
+.page[data-founder-analysis-page="overview"] .circleMetricBody {
+  gap: 14px;
+  grid-template-columns: 88px minmax(0, 1fr);
+}
+
+.page[data-founder-analysis-page="overview"] .circleMetricCopy {
+  gap: 7px;
+}
+
+.page[data-founder-analysis-page="overview"] .circleMetricCopy strong {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.page[data-founder-analysis-page="overview"] .circleMetricCopy p {
+  font-size: 11px;
+  line-height: 1.32;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewGrid {
+  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr) minmax(360px, 1.18fr);
+}
+
+.page[data-founder-analysis-page="overview"] .profileMap {
+  block-size: 406px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 300px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.page[data-founder-analysis-page="overview"] .profileMap h2 {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.page[data-founder-analysis-page="overview"] .aiSuggestion {
+  block-size: 406px;
+  gap: 8px;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.page[data-founder-analysis-page="overview"] .aiSuggestion > .eyebrow {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.page[data-founder-analysis-page="overview"] .agentTimeline,
+.page[data-founder-analysis-page="overview"] .evidenceList {
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.page[data-founder-analysis-page="overview"] .profileMap .evidenceList,
+.page[data-founder-analysis-page="overview"] .aiSuggestion .evidenceList {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem {
+  gap: 11px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  min-height: 78px;
+  padding: 9px 82px 9px 9px;
+  position: relative;
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem .iconBubble {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-block-size: 44px;
+  min-inline-size: 44px;
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem .tone_green {
+  background: linear-gradient(145deg, rgba(112, 183, 119, 0.42), rgba(52, 92, 57, 0.48));
+  border-color: rgba(142, 218, 149, 0.5);
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem .tone_amber {
+  background: linear-gradient(145deg, rgba(205, 150, 62, 0.42), rgba(91, 65, 31, 0.48));
+  border-color: rgba(230, 177, 91, 0.5);
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem .tone_pink,
+.page[data-founder-analysis-page="overview"] .evidenceItem .tone_blue {
+  background: linear-gradient(145deg, rgba(239, 156, 204, 0.38), rgba(99, 60, 82, 0.48));
+  border-color: rgba(245, 177, 216, 0.52);
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem .tone_muted {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem strong {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem span {
+  color: rgba(247, 234, 241, 0.6);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceItem em {
+  font-size: 10px;
+  inset-block-start: 12px;
+  inset-inline-end: 10px;
+  position: absolute;
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceStatus {
+  background: rgba(245, 161, 207, 0.1);
+  border-radius: 999px;
+  line-height: 1;
+  padding: 5px 7px;
+  white-space: nowrap;
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceStatus_green {
+  background: rgba(121, 202, 129, 0.13);
+  color: var(--analysis-green);
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceStatus_amber {
+  background: rgba(220, 157, 52, 0.13);
+  color: var(--analysis-amber);
+}
+
+.page[data-founder-analysis-page="overview"] .evidenceStatus_muted {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(247, 234, 241, 0.62);
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionRow {
+  align-items: start;
+  gap: 9px;
+  grid-template-columns: 30px minmax(0, 1fr);
+  min-height: 70px;
+  padding: 10px 11px;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionRow > div {
+  display: grid;
+  gap: 3px;
+  min-inline-size: 0;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionIcon {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--analysis-pink);
+  display: inline-flex;
+  filter: drop-shadow(0 4px 8px rgba(245, 161, 207, 0.18));
+  inline-size: 30px;
+  justify-content: center;
+  min-block-size: 30px;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionTitleLine {
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  min-inline-size: 0;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionRow strong {
+  font-size: 14.5px;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionRow em {
+  flex: 0 0 auto;
+  font-size: 9.5px;
+  font-weight: 500;
+  grid-column: auto;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  position: static;
+  text-transform: none;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionIssue,
+.page[data-founder-analysis-page="overview"] .suggestionAction {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionIssue {
+  color: rgba(247, 234, 241, 0.78);
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+
+.page[data-founder-analysis-page="overview"] .suggestionAction {
+  color: rgba(247, 234, 241, 0.52);
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+
+.page[data-founder-analysis-page="overview"] .aiSuggestion .pinkButton {
+  font-weight: 500;
+  min-height: 42px;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip {
+  gap: 7px;
+  block-size: 136px;
+  min-height: 112px;
+  padding: 10px 12px;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip > div {
+  gap: 8px;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip button {
+  gap: 8px;
+  min-height: 60px;
+  padding: 9px 10px;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip button > svg {
+  background: rgba(245, 161, 207, 0.1);
+  border: 1px solid rgba(245, 161, 207, 0.24);
+  border-radius: 12px;
+  block-size: 40px;
+  color: var(--analysis-pink);
+  flex: 0 0 auto;
+  inline-size: 40px;
+  padding: 9px;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip button > svg:last-child {
+  background: transparent;
+  border: 0;
+  block-size: 16px;
+  color: rgba(247, 234, 241, 0.58);
+  inline-size: 16px;
+  padding: 0;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip button strong {
+  font-size: 12.5px;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataStrip button em {
+  color: rgba(247, 234, 241, 0.54);
+  font-size: 10.5px;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+.page[data-founder-analysis-page="overview"] .addDataCtaPane {
+  border: 1px dashed rgba(245, 161, 207, 0.42);
+  padding-inline-start: 10px;
+}
+
+.page[data-founder-analysis-page="overview"] .overviewDisclaimer {
+  align-items: center;
+  color: var(--analysis-muted);
+  display: flex;
+  font-size: 11px;
+  gap: 8px;
+  min-height: 24px;
+  margin: 0 2px;
+}
+
+.page[data-founder-analysis-page="metrics"] {
+  --analysis-panel: rgba(18, 18, 20, 0.88);
+  gap: 9px;
+}
+
+.page[data-founder-analysis-page="metrics"] .hero {
+  min-height: 58px;
+  padding-block: 0;
+  transform: translateY(-14px);
+}
+
+.page[data-founder-analysis-page="metrics"] .hero .eyebrow {
+  display: none;
+}
+
+.page[data-founder-analysis-page="metrics"] .hero h1 {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 5px;
+}
+
+.page[data-founder-analysis-page="metrics"] .hero p {
+  color: rgba(238, 231, 235, 0.67);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsToolbar {
+  gap: 12px;
+  grid-template-columns: 220px 260px;
+}
+
+.page[data-founder-analysis-page="metrics"] .projectSelect,
+.page[data-founder-analysis-page="metrics"] .metricsToolbar .outlineButton {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-radius: 13px;
+  font-size: 14px;
+  font-weight: 400;
+  min-height: 42px;
+  padding-inline: 16px;
+}
+
+.page[data-founder-analysis-page="metrics"] .projectSelect {
+  color: var(--analysis-pink);
+  justify-content: space-between;
+  opacity: 0.86;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsToolbar .outlineButton {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  color: rgba(248, 242, 246, 0.88);
+  justify-content: flex-start;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsToolbar .outlineButton svg {
+  color: var(--analysis-pink);
+}
+
+.page[data-founder-analysis-page="metrics"] .metricCardsTop {
+  align-items: start;
+  gap: 10px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricCard {
+  background:
+    radial-gradient(circle at 82% 0%, rgba(245, 161, 207, 0.11), transparent 34%),
+    linear-gradient(148deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+    rgba(18, 18, 20, 0.9);
+  gap: 6px;
+  grid-template-rows: none;
+  min-height: auto;
+  overflow: visible;
+  padding: 15px 16px 14px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricCard > span:first-child {
+  color: rgba(250, 246, 248, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricCard strong {
+  align-self: center;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.07;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricCard p {
+  color: rgba(231, 224, 228, 0.7);
+  font-size: 11.5px;
+  line-height: 1.38;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .sparkline {
+  min-height: 26px;
+}
+
+.page[data-founder-analysis-page="metrics"] .sparkline[data-empty="true"] {
+  border-block-end: 1px dashed rgba(235, 223, 229, 0.2);
+  opacity: 0.72;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricStatus {
+  font-size: 11px;
+  font-weight: 500;
+  min-height: 28px;
+  padding: 0 10px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsResearchSummary {
+  align-items: start;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(260px, 1.1fr) minmax(180px, 0.8fr);
+  margin-top: 10px;
+  min-height: auto;
+  padding: 14px 16px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsResearchSummary h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.16;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsResearchSummary p,
+.page[data-founder-analysis-page="metrics"] .metricsResearchSummary small {
+  color: rgba(231, 224, 228, 0.68);
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 4px 0 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsSourceList,
+.page[data-founder-analysis-page="metrics"] .metricsCitationList,
+.page[data-founder-analysis-page="metrics"] .metricsDeltaList {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsSourceList,
+.page[data-founder-analysis-page="metrics"] .metricsCitationList {
+  list-style: none;
+  padding: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsSourceList li,
+.page[data-founder-analysis-page="metrics"] .metricsCitationList li,
+.page[data-founder-analysis-page="metrics"] .metricsDeltaList > div {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 9px 10px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsCitationList li {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsCitationList a {
+  color: #9af5ce;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsCitationList a:hover {
+  text-decoration: underline;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsDeltaList dt {
+  color: rgba(255, 196, 226, 0.92);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsDeltaList dd {
+  color: rgba(250, 246, 248, 0.88);
+  display: grid;
+  font-size: 12px;
+  gap: 6px;
+  line-height: 1.35;
+  margin: 3px 0 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsDeltaList dd span {
+  display: grid;
+  gap: 2px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsGrid {
+  gap: 12px;
+  grid-template-columns: minmax(0, 1.12fr) minmax(410px, 0.88fr);
+  margin-top: 10px;
+}
+
+.page[data-founder-analysis-page="metrics"] .metricsGrid > * {
+  min-height: 344px;
+}
+
+.page[data-founder-analysis-page="metrics"] .financePanel,
+.page[data-founder-analysis-page="metrics"] .financialProblem {
+  gap: 9px;
+  padding: 15px 16px;
+}
+
+.page[data-founder-analysis-page="metrics"] .panelHead {
+  align-items: end;
+}
+
+.page[data-founder-analysis-page="metrics"] .panelHead h2 {
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.page[data-founder-analysis-page="metrics"] .chartContext {
+  color: rgba(232, 224, 229, 0.62);
+  font-size: 12px;
+  line-height: 1.3;
+  margin: 4px 0 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .chartCard {
+  background:
+    radial-gradient(ellipse 58% 70% at 62% 10%, rgba(245, 161, 207, 0.1), transparent 62%),
+    rgba(255, 255, 255, 0.025);
+  border: 0;
+  border-radius: 0;
+  min-height: 246px;
+  padding: 5px 0 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .mrrLineChart {
+  min-height: 222px;
+}
+
+.page[data-founder-analysis-page="metrics"] .chartPlot {
+  min-height: 172px;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartState {
+  align-content: stretch;
+  gap: 10px;
+  justify-items: stretch;
+  min-height: 202px;
+  text-align: left;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartSkeleton {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.085) 0,
+      rgba(255, 255, 255, 0.085) 1px,
+      transparent 1px,
+      transparent 31px
+    );
+  border: 0;
+  border-block-end: 1px solid rgba(255, 255, 255, 0.14);
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  box-shadow: none;
+  inline-size: 100%;
+  min-height: 128px;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartBaseline {
+  background: linear-gradient(90deg, transparent, rgba(245, 161, 207, 0.32), transparent);
+  inset-block-end: 35px;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartPeriods {
+  color: rgba(225, 217, 222, 0.48);
+  display: grid;
+  font-size: 10px;
+  font-style: normal;
+  grid-template-columns: repeat(4, 1fr);
+  inset: auto 8px 8px 14px;
+  position: absolute;
+  text-align: center;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartPeriods i {
+  font-style: normal;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartCopy {
+  align-items: center;
+  color: var(--analysis-pink);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 30px minmax(0, 1fr);
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartCopy > div {
+  display: grid;
+  gap: 3px;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartCopy strong {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.page[data-founder-analysis-page="metrics"] .emptyChartCopy p {
+  font-size: 11px;
+  line-height: 1.35;
+  margin: 0;
+  max-inline-size: none;
+}
+
+.page[data-founder-analysis-page="metrics"] .financialProblem h2 {
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.17;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .problemEyebrow {
+  align-items: center;
+  color: var(--analysis-pink);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 400;
+  gap: 8px;
+}
+
+.page[data-founder-analysis-page="metrics"] .financialProblem p,
+.page[data-founder-analysis-page="metrics"] .problemLabel {
+  font-size: 12px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .problemActions {
+  align-content: start;
+  gap: 6px;
+}
+
+.page[data-founder-analysis-page="metrics"] .financialProblem {
+  grid-template-rows: auto auto auto auto minmax(0, 1fr) auto;
+}
+
+.page[data-founder-analysis-page="metrics"] .problemAction {
+  font-size: 12px;
+  font-weight: 400;
+  min-height: 38px;
+  padding: 7px 10px;
+}
+
+.page[data-founder-analysis-page="metrics"] .financialProblem .pinkButton {
+  min-height: 42px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataStrip {
+  gap: 9px;
+  margin-top: 10px;
+  padding: 12px 14px;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataStrip h2 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataStrip > div {
+  gap: 8px;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataStrip button {
+  font-weight: 400;
+  min-height: 54px;
+  padding: 9px 11px;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataStrip button strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataStrip button em {
+  color: rgba(229, 220, 225, 0.66);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataCtaPane {
+  gap: 7px;
+  min-height: 0;
+  padding-inline-start: 14px;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataCtaPane .pinkButton,
+.page[data-founder-analysis-page="metrics"] .addDataCtaPane .outlineButton {
+  min-height: 42px;
+}
+
+.page[data-founder-analysis-page="metrics"] .addDataCtaPane .pinkButton {
+  background: linear-gradient(135deg, #f5a1cf, #e78cc4);
+  color: #211119;
+  font-weight: 500;
+}
+
+.page[data-founder-analysis-page="metrics"] .legend {
+  align-items: center;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: 38px;
+  padding: 2px 6px 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendItem {
+  color: rgba(229, 220, 225, 0.78);
+  gap: 9px;
+  font-weight: 500;
+  min-inline-size: 0;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendIcon {
+  block-size: 20px;
+  inline-size: 20px;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendCopy {
+  font-size: 10.5px;
+  line-height: 1.25;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendCopy strong {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendCopy small {
+  font-size: 10.5px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendItem[data-tone="fact"] {
+  color: #83d88f;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendItem[data-tone="calculated"] {
+  color: #f1a0cf;
+}
+
+.page[data-founder-analysis-page="metrics"] .legendItem[data-tone="hypothesis"] {
+  color: #e8b34f;
+}

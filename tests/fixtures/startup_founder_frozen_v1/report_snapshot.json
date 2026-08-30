@@ -1,0 +1,32 @@
+{
+  "as_of": "2026-08-12",
+  "company": {
+    "name": "FounderCo",
+    "website": "https://founderco.example"
+  },
+  "data_revision": 1,
+  "evidence": {
+    "arr_usd": 1200000,
+    "customers": 24,
+    "gross_margin": 0.72,
+    "net_revenue_retention": 1.16
+  },
+  "id": "fixture-snapshot-001",
+  "provider_status": "offline_fixture_active",
+  "report_hash": "sha256:startup-founder-frozen-v1",
+  "schema": "startup_report_snapshot.v1",
+  "sections": [
+    "business_idea_summary",
+    "problem_solution",
+    "market_size",
+    "competitors",
+    "moat",
+    "gtm",
+    "metrics",
+    "financial_assumptions",
+    "risks",
+    "evidence_gaps",
+    "diligence_questions",
+    "action_plan"
+  ]
+}

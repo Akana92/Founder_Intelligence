@@ -1,0 +1,80 @@
+{
+  "as_of": "2026-06-30",
+  "cik": "0000320193",
+  "files": {
+    "429.json": {
+      "license_class": "public_primary",
+      "retrieval_url": "https://data.sec.gov/offline-fixture/429.json",
+      "sha256": "9e67abc373f9a9c9d4abad9fbd751bdd58f23136bac5520f3bcfe4535aeacf90"
+    },
+    "aapl-2026-10k.html": {
+      "accession_number": "0000320193-26-000001",
+      "effective_at": null,
+      "filing_acceptance_at": "2026-06-30T20:00:00.000Z",
+      "filing_date": "2026-06-30",
+      "license_class": "public_primary",
+      "report_period_end": "2026-06-30",
+      "retrieval_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000001/aapl-2026-10k.htm",
+      "sha256": "88bfdfa789a5335dc41d1a51de8dd9c1a0864f246c467c861b453155667de97b"
+    },
+    "aapl-2026-10q.html": {
+      "accession_number": "0000320193-26-000002",
+      "effective_at": null,
+      "filing_acceptance_at": "2026-06-30T20:30:00.000Z",
+      "filing_date": "2026-06-30",
+      "license_class": "public_primary",
+      "report_period_end": "2026-06-30",
+      "retrieval_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000002/aapl-2026-10q.htm",
+      "sha256": "ac705b078a1bb42ac25ee440f2c3c16ff3b7a41816d868ae1587ba8afc4d154a"
+    },
+    "aapl-2026-index.json": {
+      "accession_number": "0000320193-26-000001",
+      "license_class": "public_primary",
+      "retrieval_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000001/index.json",
+      "sha256": "b36a0557a9f5714e794f810cdc9b7b7e4d1a1700471519acfd7c14f97a560a8f"
+    },
+    "aapl-2026-xbrl.xml": {
+      "accession_number": "0000320193-26-000001",
+      "effective_at": null,
+      "filing_acceptance_at": "2026-06-30T20:00:00.000Z",
+      "filing_date": "2026-06-30",
+      "license_class": "public_primary",
+      "report_period_end": "2026-06-30",
+      "retrieval_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000001/aapl-2026-xbrl.xml",
+      "sha256": "da2d0d190b4a5ed800ea9a22b08ce916fc136b5c751bbef31ed37c97bd7cb4b7"
+    },
+    "brk-submissions.json": {
+      "cik": "0001067983",
+      "license_class": "public_primary",
+      "retrieval_url": "https://data.sec.gov/submissions/CIK0001067983.json",
+      "sha256": "a9dc07678b169fa278ee64be78e68564d564fae4aefd2aaa29c878fe67922827"
+    },
+    "company_tickers.json": {
+      "license_class": "public_primary",
+      "retrieval_url": "https://www.sec.gov/files/company_tickers.json",
+      "sha256": "7254d4ccd3795ffdecf823915d67c848befa80f6154d7b2a2e01705a3cf25330"
+    },
+    "companyfacts.json": {
+      "cik": "0000320193",
+      "license_class": "public_primary",
+      "retrieval_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "sha256": "2e4017d58ef2e41f0d606fac862e7608765d71b5bf44de87e3d0d815fd2e5809"
+    },
+    "malformed.json": {
+      "license_class": "public_primary",
+      "retrieval_url": "https://data.sec.gov/offline-fixture/malformed.json",
+      "sha256": "9fca83da9c3f09cbf783bc2369475a9ef5bcf1b005eaab45f754ffcb1ae9205e"
+    },
+    "submissions.json": {
+      "cik": "0000320193",
+      "license_class": "public_primary",
+      "retrieval_url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "sha256": "baa2f02ed79510c2411f69b601d30d42430b80ba81a81c21d429eef57c8fc090"
+    }
+  },
+  "fixture_provenance": "hand-authored offline SEC-shape fixtures; live refresh not run",
+  "license_class": "public_primary",
+  "provider": "sec",
+  "retrieved_at": "2026-08-09T00:00:00Z",
+  "ticker": "AAPL"
+}

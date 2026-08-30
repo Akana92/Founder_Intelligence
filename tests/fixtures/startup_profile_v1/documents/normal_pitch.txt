@@ -1,0 +1,16 @@
+Startup Name: SignalForge
+One Line Description: Evidence-grounded launch intelligence for founders
+Problem: founders lose weeks assembling fragmented launch evidence
+Solution: an agent turns uploaded materials into a traceable startup profile
+ICP: pre-seed and seed B2B founders
+Users: founders and strategy leads
+Buyers: startup founders
+Geography: English-speaking markets
+Stage: seed
+Business Model: subscription SaaS
+Pricing: monthly workspace subscription
+Channels: founder communities and accelerators
+Competitors: generic chat assistants, research agencies
+Assumptions: founders provide at least one business document
+Strengths: evidence gaps and contradiction tracking
+Weaknesses: market validation requires approved deep research

@@ -1,0 +1,4 @@
+email=founder.private@example.invalid
+token=sk-proj-SYNTHETIC-DO-NOT-USE
+windows_path=C:\synthetic-private\pitch.docx
+unix_path=/synthetic-private/pitch.docx

@@ -1,0 +1,133 @@
+{
+  "as_of": "2026-06-30",
+  "budget": {
+    "max_events": 1000,
+    "max_tokens": 0,
+    "max_usd": "0.00"
+  },
+  "dataset": "public_us_frozen_v1",
+  "expected_metrics": {
+    "gross_margin": {
+      "period": "2026",
+      "unit": "ratio",
+      "value": "0.400000"
+    }
+  },
+  "golden_report_contract": {
+    "metadata": {"entity_name": "AAPL"},
+    "required_claim_fragments": [
+      "gross_margin",
+      "0.400000",
+      "News polarity is deterministic metadata-only context",
+      "news is not evidence for primary financial facts"
+    ],
+    "sections": {
+      "news_coverage": "positive:2 neutral:2 negative:1"
+    }
+  },
+  "news_polarity": {
+    "counts": {"negative": 1, "neutral": 2, "positive": 2},
+    "labels": {
+      "Apple ends quarter with broad market attention": "neutral",
+      "Apple product cycle coverage expands": "positive",
+      "Apple supplier update draws investor attention": "neutral",
+      "Demand commentary remains constructive for Apple": "positive",
+      "Apple expands supplier program with positive momentum": "negative"
+    }
+  },
+  "expected_trace_nodes": [
+    "scope",
+    "scope_gate",
+    "plan",
+    "collect_sec",
+    "collect_market",
+    "collect_news",
+    "retrieve",
+    "calculate",
+    "financial_analysis",
+    "risk_analysis",
+    "market_analysis",
+    "reflexion",
+    "synthesize",
+    "prepare_report_freeze",
+    "gate_4"
+  ],
+  "negative_scenarios": {
+    "exporter_outage": {"expected_status": "blocked"},
+    "llm_timeout": {"expected_status": "blocked"},
+    "malformed_json": {"expected_status": "blocked", "file": "sec/malformed.json"},
+    "missing_filing": {"expected_status": "blocked", "file": "sec/missing-filing.html"},
+    "process_restart": {"expected_status": "blocked"},
+    "restricted_article_payload": {
+      "expected_status": "blocked",
+      "file": "news/restricted_story_input.json"
+    },
+    "sec_429": {"expected_status": "blocked", "file": "sec/429.json"},
+    "stale_market_quote": {
+      "expected_status": "blocked",
+      "file": "market/aapl_market_snapshot.json"
+    }
+  },
+  "retrieval_queries": [
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "Apple business revenue"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "gross profit and revenue"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "liquidity resources"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "risk factors"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "marketable securities"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "operating cash flow"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "net sales"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "services revenue"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "iphone sales"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "capital return"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "supply chain"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "macroeconomic uncertainty"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "cash equivalents"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "share repurchase"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "operating margin"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "public company evidence"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "annual report"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "45c66fda-d3a1-5c07-ae2c-acdf55fd5b71", "content_hash": "829fcf8fd9daa79307f796009448f761a469b633e7448f74413c3c1abe16a485", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-q"}], "query": "quarterly report"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "financial statements"},
+    {"as_of": "2026-06-30", "expected_min_hits": 1, "expected_results": [{"artifact_id": "483558f4-dac2-5d97-b69b-83dab65246d7", "content_hash": "83d075f165904addf7640f4d8d31a0d7e4104cf3d01551917ea9ed8cf599bf72", "locator_kind": "sec_filing_section", "locator_value": "section:0001:apple-inc-form-10-k"}], "query": "management discussion"}
+  ],
+  "sources": {
+    "market": {
+      "files": {
+        "aapl_market_snapshot.json": {
+          "sha256": "86a1c6ae71035c6335be456ef05562c0d44976c26bb9d3d4a6a6a147ec55f7fa"
+        },
+        "manifest.json": {
+          "sha256": "316b5cb41a4907c098fb0990faecd0dc1a19481cc035accda493198dea94a5dc"
+        }
+      }
+    },
+    "news": {
+      "files": {
+        "malformed_missing_title.json": {"sha256": "8a4417b4521ed4e51fe1e9f962885c7e8ff8657f7f9e3736378cdadbf88f61cd"},
+        "manifest.json": {"sha256": "e6fb64057f46ae45f656d73166548da83ae30627db56e95a30f2c02c6cac6222"},
+        "restricted_story_input.json": {"sha256": "735d3ad58cf4e93dc911c818c03f40875ab3744e9b0af2752c842643c330db8b"},
+        "rights_cleared_story_input.json": {"sha256": "b4906d4eed5faea6f9fd5a98418a020c57396fb5a372f8965d8fcf42ade88a8b"},
+        "story_1.json": {"sha256": "d34e904ae2e4e47fe7b16a99e6dd4d49dc7e18d36caeb6b9ee97e3e1afd1c38f"},
+        "story_2.json": {"sha256": "51d2c719df1c0d964bdfba3f59d6de40eb9e33d96ea39680328cffbcaa91a42e"},
+        "story_3.json": {"sha256": "47f10f49af5e56a966a657ead60803cab2615eeae4d1f2ffd0df7dfa79345889"},
+        "story_4.json": {"sha256": "562d39452ea07f00c9228c7b9e008f2beb88d20a528807e7c7b29799081bae9d"},
+        "story_5.json": {"sha256": "5c92a464128923c8d8591c46b5d6439fa3638eb95899b55e738f9a32b000a391"}
+      }
+    },
+    "sec": {
+      "files": {
+        "429.json": {"sha256": "9e67abc373f9a9c9d4abad9fbd751bdd58f23136bac5520f3bcfe4535aeacf90"},
+        "aapl-2026-10k.html": {"sha256": "88bfdfa789a5335dc41d1a51de8dd9c1a0864f246c467c861b453155667de97b"},
+        "aapl-2026-10q.html": {"sha256": "ac705b078a1bb42ac25ee440f2c3c16ff3b7a41816d868ae1587ba8afc4d154a"},
+        "aapl-2026-index.json": {"sha256": "b36a0557a9f5714e794f810cdc9b7b7e4d1a1700471519acfd7c14f97a560a8f"},
+        "aapl-2026-xbrl.xml": {"sha256": "da2d0d190b4a5ed800ea9a22b08ce916fc136b5c751bbef31ed37c97bd7cb4b7"},
+        "brk-submissions.json": {"sha256": "a9dc07678b169fa278ee64be78e68564d564fae4aefd2aaa29c878fe67922827"},
+        "company_tickers.json": {"sha256": "7254d4ccd3795ffdecf823915d67c848befa80f6154d7b2a2e01705a3cf25330"},
+        "companyfacts.json": {"sha256": "2e4017d58ef2e41f0d606fac862e7608765d71b5bf44de87e3d0d815fd2e5809"},
+        "malformed.json": {"sha256": "9fca83da9c3f09cbf783bc2369475a9ef5bcf1b005eaab45f754ffcb1ae9205e"},
+        "manifest.json": {"sha256": "7d4336953b7d50fd3c19c5111410505d037bf43abcdcefa4038c2f3db75af61f"},
+        "submissions.json": {"sha256": "baa2f02ed79510c2411f69b601d30d42430b80ba81a81c21d429eef57c8fc090"}
+      }
+    }
+  }
+}

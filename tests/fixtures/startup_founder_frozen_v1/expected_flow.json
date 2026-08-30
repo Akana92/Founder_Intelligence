@@ -1,0 +1,47 @@
+{
+  "create": {
+    "analysis_status": "awaiting_upload",
+    "case_status": "awaiting_upload",
+    "fixture_mode": "deterministic_offline",
+    "provider_status": "deterministic_offline_fixture"
+  },
+  "gate2": {
+    "analysis_status": "gate3_review_required",
+    "decision": "approved"
+  },
+  "gate2_preview": {
+    "provider_mode": "deterministic_offline_fixture",
+    "required_keys": [
+      "resume_token",
+      "preview"
+    ]
+  },
+  "gate3": {
+    "decision": "continue",
+    "report_status": "ready"
+  },
+  "gate4": {
+    "decision": "approved",
+    "freeze_status": "approved",
+    "pdf_status": "ready"
+  },
+  "pdf": {
+    "content_type": "application/pdf",
+    "header": "%PDF-1.4"
+  },
+  "report": {
+    "freeze_status": "required",
+    "pdf_status": "freeze_required",
+    "snapshot_hash": "sha256:startup-founder-frozen-v1",
+    "snapshot_id": "fixture-snapshot-001",
+    "snapshot_revision": 1
+  },
+  "upload": {
+    "accepted_document_ids": [
+      "doc-0001",
+      "doc-0002"
+    ],
+    "analysis_status": "gate2_preview_ready",
+    "auto_start_triggered": true
+  }
+}

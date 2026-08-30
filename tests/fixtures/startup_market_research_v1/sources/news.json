@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "source_key": "crm_ai_roundup",
+      "url": "https://example.com/news/crm-ai-roundup",
+      "label": "CRM AI roundup",
+      "as_of": "2026-07-20",
+      "retrieved_at": "2026-08-13T08:05:00Z",
+      "query": "crm ai startup news",
+      "stale": false
+    },
+    {
+      "source_key": "sales_automation_archive",
+      "url": "https://example.com/news/sales-automation-archive",
+      "label": "Sales automation archive",
+      "as_of": "2025-01-15",
+      "retrieved_at": "2026-08-13T08:05:00Z",
+      "query": "sales automation market sentiment",
+      "stale": true
+    }
+  ],
+  "sentiment_signals": [
+    {
+      "source_key": "crm_ai_roundup",
+      "subject": "AI-native CRM",
+      "sentiment": "positive",
+      "as_of": "2026-07-20T00:00:00Z",
+      "polarity_confidence": "0.71",
+      "supports_event_narrative_claims": true
+    },
+    {
+      "source_key": "sales_automation_archive",
+      "subject": "Generic sales automation",
+      "sentiment": "neutral",
+      "as_of": "2025-01-15T00:00:00Z",
+      "polarity_confidence": "0.54",
+      "supports_event_narrative_claims": true
+    }
+  ]
+}

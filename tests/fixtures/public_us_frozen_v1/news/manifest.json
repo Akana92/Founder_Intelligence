@@ -1,0 +1,64 @@
+{
+  "as_of": "2026-06-30",
+  "files": {
+    "malformed_missing_title.json": {
+      "as_of": "2026-06-30",
+      "license_class": "discovery_metadata_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "8a4417b4521ed4e51fe1e9f962885c7e8ff8657f7f9e3736378cdadbf88f61cd"
+    },
+    "restricted_story_input.json": {
+      "as_of": "2026-06-30",
+      "license_class": "research_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "735d3ad58cf4e93dc911c818c03f40875ab3744e9b0af2752c842643c330db8b"
+    },
+    "rights_cleared_story_input.json": {
+      "as_of": "2026-06-30",
+      "license_class": "rights_cleared_full_text",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "b4906d4eed5faea6f9fd5a98418a020c57396fb5a372f8965d8fcf42ade88a8b"
+    },
+    "story_1.json": {
+      "as_of": "2026-06-30",
+      "license_class": "discovery_metadata_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "d34e904ae2e4e47fe7b16a99e6dd4d49dc7e18d36caeb6b9ee97e3e1afd1c38f"
+    },
+    "story_2.json": {
+      "as_of": "2026-06-30",
+      "license_class": "discovery_metadata_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "51d2c719df1c0d964bdfba3f59d6de40eb9e33d96ea39680328cffbcaa91a42e"
+    },
+    "story_3.json": {
+      "as_of": "2026-06-30",
+      "license_class": "discovery_metadata_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "47f10f49af5e56a966a657ead60803cab2615eeae4d1f2ffd0df7dfa79345889"
+    },
+    "story_4.json": {
+      "as_of": "2026-06-30",
+      "license_class": "discovery_metadata_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "562d39452ea07f00c9228c7b9e008f2beb88d20a528807e7c7b29799081bae9d"
+    },
+    "story_5.json": {
+      "as_of": "2026-06-30",
+      "license_class": "discovery_metadata_only",
+      "provider": "gdelt",
+      "retrieval_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=AAPL&mode=artlist",
+      "sha256": "5c92a464128923c8d8591c46b5d6439fa3638eb95899b55e738f9a32b000a391"
+    }
+  },
+  "license_class": "discovery_metadata_only",
+  "provider": "gdelt",
+  "query": "AAPL"
+}

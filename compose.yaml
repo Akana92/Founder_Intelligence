@@ -1,0 +1,92 @@
+name: capstone-n3
+
+services:
+  api:
+    image: capstone-n3-backend:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    environment:
+      DDA_DATA_DIR: /app/data
+      DDA_RUNTIME_PROFILE: ${DDA_RUNTIME_PROFILE:-local}
+      # Enables the custom sanitized exporter; a blank key still prevents remote export.
+      DDA_LANGSMITH_TRACING: ${DDA_LANGSMITH_TRACING:-true}
+      DDA_AUDIT_REQUIRED: ${DDA_AUDIT_REQUIRED:-true}
+      FOUNDER_CASE_FIXTURE_MODE: ${FOUNDER_CASE_FIXTURE_MODE:-live}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_STARTUP_API_KEY: ${OPENAI_STARTUP_API_KEY:-}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+    volumes:
+      - case-data:/app/data
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/live', timeout=5)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  web:
+    image: capstone-n3-web:local
+    build:
+      context: ./frontend/founder
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_ADMIN_CONSOLE_URL: ${NEXT_PUBLIC_ADMIN_CONSOLE_URL:-http://localhost:8501/}
+    init: true
+    environment:
+      FOUNDER_API_BASE_URL: http://api:8000
+      FOUNDER_CASE_FIXTURE_MODE: ${FOUNDER_CASE_FIXTURE_MODE:-live}
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${WEB_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then((response) => { if (!response.ok) process.exit(1); }).catch(() => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  admin:
+    image: capstone-n3-backend:local
+    profiles: ["admin"]
+    init: true
+    command:
+      - streamlit
+      - run
+      - src/due_diligence_agent/presentation/streamlit/app.py
+      - --server.address
+      - 0.0.0.0
+      - --server.port
+      - "8501"
+      - --server.headless
+      - "true"
+      - --browser.gatherUsageStats
+      - "false"
+    environment:
+      DDA_DATA_DIR: /app/data
+      DDA_RUNTIME_PROFILE: ${DDA_RUNTIME_PROFILE:-local}
+      # Enables the custom sanitized exporter; a blank key still prevents remote export.
+      DDA_LANGSMITH_TRACING: ${DDA_LANGSMITH_TRACING:-true}
+      DDA_AUDIT_REQUIRED: ${DDA_AUDIT_REQUIRED:-true}
+      FOUNDER_CASE_FIXTURE_MODE: ${FOUNDER_CASE_FIXTURE_MODE:-live}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_STARTUP_API_KEY: ${OPENAI_STARTUP_API_KEY:-}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+    volumes:
+      - case-data:/app/data
+    ports:
+      - "127.0.0.1:${ADMIN_PORT:-8501}:8501"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=5)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  case-data:

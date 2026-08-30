@@ -1,0 +1,19 @@
+{
+  "domain": "example.edu",
+  "license_class": "discovery_metadata_only",
+  "polarity": "negative",
+  "published_at": "2026-06-27T18:20:00Z",
+  "provenance": {
+    "provider": "gdelt",
+    "provider_version": "doc-api-2.0",
+    "response_hash": "d21bd06b66286d9186781192572cf63d110a5d71195670fe05af454d5ac1e1fc",
+    "source_url": "https://example.edu/policy/aapl-regulatory-context"
+  },
+  "publisher": "Example Policy",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "response_hash": "d21bd06b66286d9186781192572cf63d110a5d71195670fe05af454d5ac1e1fc",
+  "snippet": "Regulatory coverage is negative context but not a primary metric source.",
+  "source_url": "https://example.edu/policy/aapl-regulatory-context",
+  "title": "Apple expands supplier program with positive momentum"
+}

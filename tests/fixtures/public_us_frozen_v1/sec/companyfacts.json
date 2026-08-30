@@ -1,0 +1,36 @@
+{
+  "cik": 320193,
+  "entityName": "Apple Inc.",
+  "facts": {
+    "us-gaap": {
+      "Revenues": {
+        "label": "Revenues",
+        "units": {
+          "USD": [
+            {
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-06-30",
+              "val": 1000000
+            }
+          ]
+        }
+      },
+      "GrossProfit": {
+        "label": "Gross Profit",
+        "units": {
+          "USD": [
+            {
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-06-30",
+              "val": 400000
+            }
+          ]
+        }
+      }
+    }
+  }
+}

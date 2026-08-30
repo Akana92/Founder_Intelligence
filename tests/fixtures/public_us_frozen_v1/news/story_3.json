@@ -1,0 +1,19 @@
+{
+  "domain": "example.net",
+  "license_class": "discovery_metadata_only",
+  "polarity": "positive",
+  "published_at": "2026-06-26T09:05:00Z",
+  "provenance": {
+    "provider": "gdelt",
+    "provider_version": "doc-api-2.0",
+    "response_hash": "7c91ff941a9f9692a6d9039cc88c0267a66df52071f601770cddbaa78e2b5bb7",
+    "source_url": "https://example.net/tech/aapl-product-cycle"
+  },
+  "publisher": "Example Tech",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "response_hash": "7c91ff941a9f9692a6d9039cc88c0267a66df52071f601770cddbaa78e2b5bb7",
+  "snippet": "A product-cycle article provides narrative context only.",
+  "source_url": "https://example.net/tech/aapl-product-cycle",
+  "title": "Apple product cycle coverage expands"
+}

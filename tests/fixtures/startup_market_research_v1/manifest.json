@@ -1,0 +1,15 @@
+{
+  "schema_version": "startup_market_research_fixture_manifest@1",
+  "research_schema_version": "startup_market_research@1",
+  "as_of": "2026-08-13",
+  "required_files": {
+    "sources/competitors.json": {
+      "sha256": "2bf001efed6634ab1c15a0912e0a127ccc9dac5f444427fcbcd0066e6dbde972"
+    }
+  },
+  "optional_files": {
+    "sources/news.json": {
+      "sha256": "54acdb36976370810c044de06186003c818d385f0bfc3c2d12997e42700e5e63"
+    }
+  }
+}

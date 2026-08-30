@@ -1,0 +1,4 @@
+metric,value,unit,period
+orders,720,count,2026-07
+revenue,36000,USD,2026-07
+net_burn,9000,USD,2026-07

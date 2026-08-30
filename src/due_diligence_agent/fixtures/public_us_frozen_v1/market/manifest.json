@@ -1,0 +1,15 @@
+{
+  "as_of": "2026-06-30",
+  "files": {
+    "aapl_market_snapshot.json": {
+      "as_of": "2026-06-30",
+      "license_class": "research_only",
+      "provider": "yfinance_demo",
+      "retrieval_url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL",
+      "sha256": "86a1c6ae71035c6335be456ef05562c0d44976c26bb9d3d4a6a6a147ec55f7fa"
+    }
+  },
+  "license_class": "research_only",
+  "provider": "yfinance_demo",
+  "ticker": "AAPL"
+}

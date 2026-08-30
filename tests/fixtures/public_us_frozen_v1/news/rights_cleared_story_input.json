@@ -1,0 +1,12 @@
+{
+  "domain": "rights.example",
+  "full_text": "Rights-cleared article body for offline contract testing.",
+  "license_class": "rights_cleared_full_text",
+  "published_at": "2026-06-29T08:00:00Z",
+  "publisher": "Rights Example",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "snippet": "Rights-cleared story snippet.",
+  "source_url": "https://rights.example/aapl/cleared",
+  "title": "Rights-cleared Apple article can retain body"
+}

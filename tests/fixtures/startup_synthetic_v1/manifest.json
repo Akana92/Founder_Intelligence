@@ -1,0 +1,385 @@
+{
+  "schema_version": "startup_synthetic_fixture_manifest@1",
+  "dataset": "startup_synthetic_v1",
+  "as_of": "2026-08-13",
+  "network_policy": "no_external_network",
+  "privacy_policy": "synthetic_no_secrets_no_emails_no_local_paths",
+  "fixture_layer": "multi_format_synthetic_inputs",
+  "active_format_matrix": [
+    "csv",
+    "docx",
+    "jpeg",
+    "pdf",
+    "png",
+    "safe_zip",
+    "xlsx"
+  ],
+  "max_total_fixture_bytes": 100000,
+  "cases": {
+    "marketplace": {
+      "formats": [
+        "csv",
+        "docx",
+        "jpeg"
+      ],
+      "files": {
+        "cases/marketplace/metrics.csv": {
+          "path": "cases/marketplace/metrics.csv",
+          "sha256": "500043e759a2d549d7efba94c33fe5baee7bb2506c9166c97a799ceebc22de05",
+          "bytes": 118,
+          "format": "csv"
+        },
+        "cases/marketplace/brief.docx": {
+          "path": "cases/marketplace/brief.docx",
+          "sha256": "0029b52381d9b91bbcb8edf57720cd2829c3d2a00ad4d7018a4e85cfd7004e52",
+          "bytes": 36707,
+          "format": "docx",
+          "max_member_bytes": 500000,
+          "archive_members": [
+            {
+              "path": "[Content_Types].xml",
+              "bytes": 1738,
+              "sha256": "66c84fb7a6aa3c4ead49f895e4a7044df1fb57de1ed76d09b2686e91f5bed5b4"
+            },
+            {
+              "path": "_rels/.rels",
+              "bytes": 734,
+              "sha256": "a9ae57efe9186f07d48303bcac5d54c7e359bf3f503939c03ad2954e5c59a5c4"
+            },
+            {
+              "path": "customXml/_rels/item1.xml.rels",
+              "bytes": 295,
+              "sha256": "1ca6c9a64edcebe24ee703a54403611b322d96da33371779e742d2d3f7ed7a6c"
+            },
+            {
+              "path": "customXml/item1.xml",
+              "bytes": 262,
+              "sha256": "a86086ffc5d8e83ebd6c71a55d1d2efaa31b137977f5f3a752366e1023612144"
+            },
+            {
+              "path": "customXml/itemProps1.xml",
+              "bytes": 354,
+              "sha256": "c542307b13ec29a8b546217bb37936ab4822e044b265d2952985ec3d6afed24e"
+            },
+            {
+              "path": "docProps/app.xml",
+              "bytes": 1132,
+              "sha256": "be664981c3141cddfc59362beb287ebf20d0773660e2dd6faac5968a5930a081"
+            },
+            {
+              "path": "docProps/core.xml",
+              "bytes": 721,
+              "sha256": "d14be8284e406d14dc2a576b19f15e7f637b955f9e27a3d9ed871ec99606f7ba"
+            },
+            {
+              "path": "docProps/thumbnail.jpeg",
+              "bytes": 8324,
+              "sha256": "96367138dc44ce09bf2c8f0f8e49348a1478d2c5c0af69bbc2bbc38b63cdcead"
+            },
+            {
+              "path": "word/_rels/document.xml.rels",
+              "bytes": 1227,
+              "sha256": "1e7f0eb144a98e199249314f61ff32a8de2a27e56d8e9ee6b524e1c6b235d377"
+            },
+            {
+              "path": "word/document.xml",
+              "bytes": 1835,
+              "sha256": "79b2da52814473773932c6c504f1772258fc04ab7881bf2c0fdbb5575e1de295"
+            },
+            {
+              "path": "word/fontTable.xml",
+              "bytes": 2811,
+              "sha256": "79385fb7f60247507ecaffc292e9ebd52ea0657b8634f629ba6fccc54011d6bb"
+            },
+            {
+              "path": "word/numbering.xml",
+              "bytes": 5513,
+              "sha256": "70976f19cbcd896e51890859fe6ecb3467a5a7ad0c040160fedc5a1993cb09ce"
+            },
+            {
+              "path": "word/settings.xml",
+              "bytes": 2535,
+              "sha256": "51a0d348fe85965c66e4748a03c3c0d055d78455514f03cb121c334af7d73689"
+            },
+            {
+              "path": "word/styles.xml",
+              "bytes": 349458,
+              "sha256": "02d71a68ddb92c055e84526d6a9e45700be3872781ababf759241694bc30e384"
+            },
+            {
+              "path": "word/stylesWithEffects.xml",
+              "bytes": 438131,
+              "sha256": "463ae0928cf0d84775dbf8cf18d6c3029f6707c81bf590f6d6dd8757a5e93f15"
+            },
+            {
+              "path": "word/theme/theme1.xml",
+              "bytes": 10939,
+              "sha256": "e3a8ab7db9ca7afca56f5f2820a56e8b660016c647773555b060b0a02ac76941"
+            },
+            {
+              "path": "word/webSettings.xml",
+              "bytes": 438,
+              "sha256": "349d36de7434d09f86987ff671d8814964a0588c1e630c06e562cda7e75e9f95"
+            }
+          ]
+        },
+        "cases/marketplace/evidence.jpeg": {
+          "path": "cases/marketplace/evidence.jpeg",
+          "sha256": "9c1e1e9ce958de721f34d6a30c50d85e452ce8758fad798a83bd63c587f5529b",
+          "bytes": 632,
+          "format": "jpeg"
+        }
+      }
+    },
+    "pre_revenue_service": {
+      "formats": [
+        "csv",
+        "docx",
+        "pdf",
+        "safe_zip"
+      ],
+      "files": {
+        "cases/pre_revenue_service/metrics.csv": {
+          "path": "cases/pre_revenue_service/metrics.csv",
+          "sha256": "878e369ee1e662f1a73d01bc445841306bfc314316b61ec62b6df37d2460b0cf",
+          "bytes": 83,
+          "format": "csv"
+        },
+        "cases/pre_revenue_service/concept.pdf": {
+          "path": "cases/pre_revenue_service/concept.pdf",
+          "sha256": "1012ae547024302e10c44a5eeae1f5f8ef29b2d0255e85b77e79c31878ae5ce7",
+          "bytes": 1531,
+          "format": "pdf"
+        },
+        "cases/pre_revenue_service/interview.docx": {
+          "path": "cases/pre_revenue_service/interview.docx",
+          "sha256": "938169f1e5f80b653e79a38e7519f8a1b4afe2b9f40ef28f94d6898048ecf78d",
+          "bytes": 36673,
+          "format": "docx",
+          "max_member_bytes": 500000,
+          "archive_members": [
+            {
+              "path": "[Content_Types].xml",
+              "bytes": 1738,
+              "sha256": "66c84fb7a6aa3c4ead49f895e4a7044df1fb57de1ed76d09b2686e91f5bed5b4"
+            },
+            {
+              "path": "_rels/.rels",
+              "bytes": 734,
+              "sha256": "a9ae57efe9186f07d48303bcac5d54c7e359bf3f503939c03ad2954e5c59a5c4"
+            },
+            {
+              "path": "customXml/_rels/item1.xml.rels",
+              "bytes": 295,
+              "sha256": "1ca6c9a64edcebe24ee703a54403611b322d96da33371779e742d2d3f7ed7a6c"
+            },
+            {
+              "path": "customXml/item1.xml",
+              "bytes": 262,
+              "sha256": "a86086ffc5d8e83ebd6c71a55d1d2efaa31b137977f5f3a752366e1023612144"
+            },
+            {
+              "path": "customXml/itemProps1.xml",
+              "bytes": 354,
+              "sha256": "c542307b13ec29a8b546217bb37936ab4822e044b265d2952985ec3d6afed24e"
+            },
+            {
+              "path": "docProps/app.xml",
+              "bytes": 1132,
+              "sha256": "be664981c3141cddfc59362beb287ebf20d0773660e2dd6faac5968a5930a081"
+            },
+            {
+              "path": "docProps/core.xml",
+              "bytes": 721,
+              "sha256": "d14be8284e406d14dc2a576b19f15e7f637b955f9e27a3d9ed871ec99606f7ba"
+            },
+            {
+              "path": "docProps/thumbnail.jpeg",
+              "bytes": 8324,
+              "sha256": "96367138dc44ce09bf2c8f0f8e49348a1478d2c5c0af69bbc2bbc38b63cdcead"
+            },
+            {
+              "path": "word/_rels/document.xml.rels",
+              "bytes": 1227,
+              "sha256": "1e7f0eb144a98e199249314f61ff32a8de2a27e56d8e9ee6b524e1c6b235d377"
+            },
+            {
+              "path": "word/document.xml",
+              "bytes": 1757,
+              "sha256": "92d9298c164df1f2b7f8baf511f8ca02087ce9a57c65032a969e2c4b7a993cad"
+            },
+            {
+              "path": "word/fontTable.xml",
+              "bytes": 2811,
+              "sha256": "79385fb7f60247507ecaffc292e9ebd52ea0657b8634f629ba6fccc54011d6bb"
+            },
+            {
+              "path": "word/numbering.xml",
+              "bytes": 5513,
+              "sha256": "70976f19cbcd896e51890859fe6ecb3467a5a7ad0c040160fedc5a1993cb09ce"
+            },
+            {
+              "path": "word/settings.xml",
+              "bytes": 2535,
+              "sha256": "51a0d348fe85965c66e4748a03c3c0d055d78455514f03cb121c334af7d73689"
+            },
+            {
+              "path": "word/styles.xml",
+              "bytes": 349458,
+              "sha256": "02d71a68ddb92c055e84526d6a9e45700be3872781ababf759241694bc30e384"
+            },
+            {
+              "path": "word/stylesWithEffects.xml",
+              "bytes": 438131,
+              "sha256": "463ae0928cf0d84775dbf8cf18d6c3029f6707c81bf590f6d6dd8757a5e93f15"
+            },
+            {
+              "path": "word/theme/theme1.xml",
+              "bytes": 10939,
+              "sha256": "e3a8ab7db9ca7afca56f5f2820a56e8b660016c647773555b060b0a02ac76941"
+            },
+            {
+              "path": "word/webSettings.xml",
+              "bytes": 438,
+              "sha256": "349d36de7434d09f86987ff671d8814964a0588c1e630c06e562cda7e75e9f95"
+            }
+          ]
+        },
+        "cases/pre_revenue_service/research_pack.zip": {
+          "path": "cases/pre_revenue_service/research_pack.zip",
+          "sha256": "2429230ba5b43387ae77fd50e45d04d8131c7a48766309571acfd798b246872d",
+          "bytes": 218,
+          "format": "safe_zip",
+          "max_member_bytes": 5000,
+          "archive_members": [
+            {
+              "path": "notes/customer-discovery.txt",
+              "bytes": 69,
+              "sha256": "6f147ce74c5633c8d03f9c42c20ace18195a1eeba03abc59cce69d3c5aeda503"
+            }
+          ]
+        }
+      }
+    },
+    "saas": {
+      "formats": [
+        "csv",
+        "pdf",
+        "xlsx"
+      ],
+      "files": {
+        "cases/saas/metrics.csv": {
+          "path": "cases/saas/metrics.csv",
+          "sha256": "ff5d905908a2f19e05aac5af932fe48b79cad65404e895571581c6bd30437c24",
+          "bytes": 126,
+          "format": "csv"
+        },
+        "cases/saas/pitch.pdf": {
+          "path": "cases/saas/pitch.pdf",
+          "sha256": "0312d8f0bf1055b2fd6d555f5686bdf5de319d7f4e27788dfff2d71dc927b0d5",
+          "bytes": 1523,
+          "format": "pdf"
+        },
+        "cases/saas/model.xlsx": {
+          "path": "cases/saas/model.xlsx",
+          "sha256": "51a8b5bda658ac27268d94da1764c1ef83b9d303b7b537d04282f2d4edc8675f",
+          "bytes": 4969,
+          "format": "xlsx",
+          "max_member_bytes": 20000,
+          "archive_members": [
+            {
+              "path": "[Content_Types].xml",
+              "bytes": 975,
+              "sha256": "ba5af858089dd3357b4e4408a86694ff0a62ec37f21ef57a3a09544dc0ab18c4"
+            },
+            {
+              "path": "_rels/.rels",
+              "bytes": 531,
+              "sha256": "c545941ba36c15fcdce4ae4568c663f3ced1a2226ad5082d3fd66b178bfac11a"
+            },
+            {
+              "path": "docProps/app.xml",
+              "bytes": 205,
+              "sha256": "209fca6b00afe72a5029754b94be5953d8f16d96f67130325566b9366ad4ccc5"
+            },
+            {
+              "path": "docProps/core.xml",
+              "bytes": 555,
+              "sha256": "6b8905fbc2e5b54a96525755eb29c376628376ca99d3dd79dfa87345895713c5"
+            },
+            {
+              "path": "xl/_rels/workbook.xml.rels",
+              "bytes": 504,
+              "sha256": "26ad8fcc38d41229833e624496df364492772697ad2e5d6696e1738f05ba225f"
+            },
+            {
+              "path": "xl/styles.xml",
+              "bytes": 2550,
+              "sha256": "ceabc26839ae8c5285c667366bffa538562f76e219eb4f2f5188626232d96900"
+            },
+            {
+              "path": "xl/theme/theme1.xml",
+              "bytes": 10140,
+              "sha256": "d15e8ebf78ef7b9720839d7ae8fdc81a7df5bc24706d8e137df61a5683c358d9"
+            },
+            {
+              "path": "xl/workbook.xml",
+              "bytes": 548,
+              "sha256": "d5d906f9150257767ea0bbc13d52d0f7215b3d985b3c973d83bf24b65a543d5a"
+            },
+            {
+              "path": "xl/worksheets/sheet1.xml",
+              "bytes": 1264,
+              "sha256": "5272873132ecfb15866f30ab2dd82752fe667d6e9cb443c447be46ab2bd10f18"
+            }
+          ]
+        }
+      }
+    },
+    "transactional": {
+      "formats": [
+        "csv",
+        "png",
+        "safe_zip"
+      ],
+      "files": {
+        "cases/transactional/metrics.csv": {
+          "path": "cases/transactional/metrics.csv",
+          "sha256": "ee3701f2997dc1b9727d0c006b90a4a1f5f2ac028745bd0177f4a40965bb95fc",
+          "bytes": 102,
+          "format": "csv"
+        },
+        "cases/transactional/receipt.png": {
+          "path": "cases/transactional/receipt.png",
+          "sha256": "75e9c334b7d2307a97595b3f8c7a21794903c5a95deebb49d3a95ce3f930d3b2",
+          "bytes": 75,
+          "format": "png"
+        },
+        "cases/transactional/data_room.zip": {
+          "path": "cases/transactional/data_room.zip",
+          "sha256": "5c27655e384def341151c3253502599b0fc9e062d2f2c4839ce73b44f445deca",
+          "bytes": 455,
+          "format": "safe_zip",
+          "max_member_bytes": 5000,
+          "archive_members": [
+            {
+              "path": "metrics/orders.csv",
+              "bytes": 50,
+              "sha256": "8f0f528c56b720a9904f7b9da5d8c1ef8133ca969711d02f1690d0023e8c79a6"
+            },
+            {
+              "path": "summary/traction.txt",
+              "bytes": 208,
+              "sha256": "cd0aab5ec5eb7bd3e30b9fa2978e046d8bea8ed8faa716c36dfca17257bee3f7"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "expected_contracts": {
+    "path": "expected_contracts.json",
+    "sha256": "83211e73c05a6f288ccabd8c050c300b87b575d4cbb39f7a4c848e0fef4add4f",
+    "bytes": 7680
+  }
+}

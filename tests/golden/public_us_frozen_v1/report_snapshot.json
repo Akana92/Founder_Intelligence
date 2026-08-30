@@ -1,0 +1,40 @@
+{
+  "dataset": "public_us_frozen_v1",
+  "metadata": {
+    "entity_name": "AAPL"
+  },
+  "required_claim_fragments": [
+    "gross_margin",
+    "0.400000",
+    "News polarity is deterministic metadata-only context",
+    "news is not evidence for primary financial facts"
+  ],
+  "required_sections": [
+    "metadata",
+    "executive_summary",
+    "investment_thesis",
+    "counter_thesis",
+    "company_profile",
+    "evidence_coverage",
+    "financial_metrics",
+    "risk_matrix",
+    "contradictions",
+    "missing_data",
+    "next_steps",
+    "methodology",
+    "source_and_calculation_appendix",
+    "disclaimer",
+    "decision_owner",
+    "filing_timeline",
+    "financial_trends",
+    "capital_structure",
+    "valuation",
+    "sec_risk_factor_changes",
+    "corporate_events",
+    "news_coverage"
+  ],
+  "schema": "public_report_snapshot.v1",
+  "sections": {
+    "news_coverage": "positive:2 neutral:2 negative:1"
+  }
+}

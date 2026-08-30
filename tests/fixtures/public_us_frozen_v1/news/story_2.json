@@ -1,0 +1,19 @@
+{
+  "domain": "example.org",
+  "license_class": "discovery_metadata_only",
+  "polarity": "positive",
+  "published_at": "2026-06-25T15:45:00Z",
+  "provenance": {
+    "provider": "gdelt",
+    "provider_version": "doc-api-2.0",
+    "response_hash": "527ea5d5ddd0a7e4f5df774f6ebc0b66fedc8b6431bfa6bd9fccf26e47cd268a",
+    "source_url": "https://example.org/markets/aapl-demand-context"
+  },
+  "publisher": "Example Markets",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "response_hash": "527ea5d5ddd0a7e4f5df774f6ebc0b66fedc8b6431bfa6bd9fccf26e47cd268a",
+  "snippet": "Analysts describe demand signals as positive but not primary financial evidence.",
+  "source_url": "https://example.org/markets/aapl-demand-context",
+  "title": "Demand commentary remains constructive for Apple"
+}

@@ -1,0 +1,16 @@
+{
+  "directory": {
+    "item": [
+      {
+        "name": "aapl-2026-10k.htm",
+        "type": "10-K",
+        "size": "100"
+      },
+      {
+        "name": "aapl-2026-xbrl.xml",
+        "type": "XML",
+        "size": "100"
+      }
+    ]
+  }
+}

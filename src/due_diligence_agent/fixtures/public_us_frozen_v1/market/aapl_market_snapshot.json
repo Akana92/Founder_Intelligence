@@ -1,0 +1,28 @@
+{
+  "as_of": "2026-06-30",
+  "currency": "USD",
+  "market_cap": "2900000000000",
+  "prices": [
+    {
+      "close": "210.10",
+      "date": "2026-06-26",
+      "volume": 41234567
+    },
+    {
+      "close": "211.34",
+      "date": "2026-06-29",
+      "volume": 39876543
+    },
+    {
+      "close": "212.05",
+      "date": "2026-06-30",
+      "volume": 40123456
+    }
+  ],
+  "provider_payload": {
+    "source": "frozen yfinance-shaped fixture"
+  },
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL",
+  "ticker": "AAPL"
+}

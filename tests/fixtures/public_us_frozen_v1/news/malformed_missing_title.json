@@ -1,0 +1,9 @@
+{
+  "domain": "malformed.example",
+  "published_at": "2026-06-29T08:00:00Z",
+  "publisher": "Malformed Example",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "snippet": "Missing title should fail.",
+  "source_url": "https://malformed.example/aapl"
+}

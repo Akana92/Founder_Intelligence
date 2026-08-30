@@ -1,0 +1,19 @@
+{
+  "domain": "example.com",
+  "license_class": "discovery_metadata_only",
+  "polarity": "neutral",
+  "published_at": "2026-06-24T13:30:00Z",
+  "provenance": {
+    "provider": "gdelt",
+    "provider_version": "doc-api-2.0",
+    "response_hash": "fa60dc552c3fa922215fc676676acf29d3b2581e604b6c8f26ddbff356710160",
+    "source_url": "https://example.com/business/aapl-supplier-context"
+  },
+  "publisher": "Example Business",
+  "query": "AAPL",
+  "retrieved_at": "2026-08-09T12:00:00Z",
+  "response_hash": "fa60dc552c3fa922215fc676676acf29d3b2581e604b6c8f26ddbff356710160",
+  "snippet": "Apple supplier news creates a neutral context item for the frozen demo.",
+  "source_url": "https://example.com/business/aapl-supplier-context",
+  "title": "Apple supplier update draws investor attention"
+}

@@ -1,0 +1,35 @@
+{
+  "artifacts": {
+    "api_stderr_log": "artifacts/ui/founder-api.stderr.log",
+    "api_stdout_log": "artifacts/ui/founder-api.stdout.log",
+    "desktop_screenshot": "artifacts/ui/founder-desktop.png",
+    "mobile_screenshot": "artifacts/ui/founder-mobile.png",
+    "web_stderr_log": "artifacts/ui/founder-web.stderr.log",
+    "web_stdout_log": "artifacts/ui/founder-web.stdout.log"
+  },
+  "as_of": "2026-08-12",
+  "dataset": "startup_founder_frozen_v1",
+  "documents": [
+    {
+      "mime_type": "text/plain",
+      "path": "documents/founder_pitch.txt"
+    },
+    {
+      "mime_type": "text/plain",
+      "path": "documents/founder_metrics.txt"
+    }
+  ],
+  "expected_flow": [
+    "create_case",
+    "upload_documents",
+    "gate2_preview",
+    "gate2_decision",
+    "gate3_decision",
+    "report_snapshot",
+    "gate4_decision",
+    "report_pdf"
+  ],
+  "network_policy": "no_external_network",
+  "provider_status": "offline_fixture_active",
+  "schema": "startup_founder_fixture_manifest.v1"
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "privacy_v1",
+  "version": "1",
+  "generated": false,
+  "contains_real_personal_data": false,
+  "policy_versions": {
+    "deterministic_rules": "startup-redact-rules@1",
+    "presidio_optional": "startup-presidio-local@1",
+    "egress": "egress@1"
+  },
+  "seeded_categories": [
+    "email",
+    "phone",
+    "banking",
+    "secret",
+    "stable_id",
+    "quasi_identifier"
+  ],
+  "forbidden_surfaces": [
+    "disclosure_preview",
+    "domain_repr",
+    "domain_json",
+    "trace_attributes",
+    "tool_payload",
+    "retrieved_fragment_metadata",
+    "exception_string"
+  ],
+  "notes": "Synthetic test values are generated inside tests/privacy/test_startup_redaction.py and must not be copied into this manifest."
+}

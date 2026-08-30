@@ -1,0 +1,135 @@
+{
+  "schema": "startup_profile_fixture_manifest.v1",
+  "dataset": "startup_profile_v1",
+  "case_id": "10000000-0000-4000-8000-000000000001",
+  "case_revision_at": "2026-08-13T09:00:00Z",
+  "network_policy": "no_external_network",
+  "fixture_layer": "normalized_synthetic_inputs",
+  "active_format_matrix": [
+    "pdf",
+    "docx",
+    "png",
+    "jpeg",
+    "csv",
+    "xlsx",
+    "safe_zip"
+  ],
+  "documents": [
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000001",
+      "path": "documents/normal_pitch.txt",
+      "role": "normal_pitch",
+      "format": "pdf",
+      "mime_type": "application/pdf",
+      "parse_status": "parsed",
+      "sha256": "594d0d025e45f51f2ad8924e58b48139d0e40f0a7afc76a0d15480abe3d274f0"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000002",
+      "path": "documents/docx_pitch.txt",
+      "role": "docx_pitch",
+      "format": "docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "parse_status": "parsed",
+      "sha256": "83f62f2b0d6e073b92d85b14f6290f6320a44c354b311e4b81775127448e926e"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000003",
+      "path": "documents/image_pitch_png.txt",
+      "role": "png_ocr",
+      "format": "png",
+      "mime_type": "image/png",
+      "parse_status": "parsed",
+      "sha256": "f59b7eb0a8537ba2c19a26ae0228084a59b92ead84a20e7278711b86550fd854"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000004",
+      "path": "documents/image_pitch_jpeg.txt",
+      "role": "jpeg_ocr",
+      "format": "jpeg",
+      "mime_type": "image/jpeg",
+      "parse_status": "parsed",
+      "sha256": "9d1fd9a69a4376b7d467e636300848a7b59210a43e83ee6fab30d62f0e45f9c9"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000005",
+      "path": "documents/arr_source_a.csv",
+      "role": "arr_source",
+      "format": "csv",
+      "mime_type": "text/csv",
+      "parse_status": "parsed",
+      "sha256": "2883fb651e4df5a35f6c120b5cc2b9c1cfe55f247b8544d0b38613f6ec32dd2a"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000006",
+      "path": "documents/arr_source_b.csv",
+      "role": "arr_source",
+      "format": "xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "parse_status": "parsed",
+      "sha256": "06ad6c12b0eef079743d4439b821afacfdcf00414df991ffff6563b7c44fcf10"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000007",
+      "path": "documents/spreadsheet_only.csv",
+      "role": "spreadsheet_only",
+      "format": "csv",
+      "mime_type": "text/csv",
+      "parse_status": "parsed",
+      "sha256": "2cc916dfb7de6aff16af8ec54a4f32bef1d70dd12a99254b244bf37d80e37e09"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000008",
+      "path": "documents/safe_mixed_zip.json",
+      "role": "safe_mixed_zip",
+      "format": "safe_zip",
+      "mime_type": "application/zip",
+      "parse_status": "partial",
+      "sha256": "f59f6011076bb220b81598235efafdf6055d4763bc333dde05cbc75b57c65edd"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000009",
+      "path": "documents/damaged_unsupported_sibling.txt",
+      "role": "damaged_sibling",
+      "format": "unsupported",
+      "mime_type": "application/octet-stream",
+      "parse_status": "damaged",
+      "sha256": "8d635400aafd7a8c7a44745a66d361597b6d83ec011bc1fd6c18ae38179f66b6"
+    },
+    {
+      "artifact_id": "20000000-0000-4000-8000-000000000010",
+      "path": "documents/privacy_sentinel.txt",
+      "role": "privacy_sentinel",
+      "format": "text",
+      "mime_type": "text/plain",
+      "parse_status": "parsed",
+      "sha256": "2bd895e72d0f05427a96a48478c7ffa677f65fda947691fd065f1fd2d61c67c7"
+    }
+  ],
+  "scenarios": [
+    {
+      "key": "normal_mixed_pitch",
+      "documents": ["documents/normal_pitch.txt"]
+    },
+    {
+      "key": "spreadsheet_heavy_missing_narrative",
+      "documents": ["documents/spreadsheet_only.csv"]
+    },
+    {
+      "key": "contradictory_arr",
+      "documents": ["documents/arr_source_a.csv", "documents/arr_source_b.csv"]
+    },
+    {
+      "key": "safe_mixed_zip",
+      "documents": ["documents/safe_mixed_zip.json"]
+    },
+    {
+      "key": "damaged_unsupported_sibling",
+      "documents": ["documents/normal_pitch.txt", "documents/damaged_unsupported_sibling.txt"]
+    },
+    {
+      "key": "privacy_sentinel",
+      "documents": ["documents/privacy_sentinel.txt"]
+    }
+  ]
+}

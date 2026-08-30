@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T00:00:00+05:00",
+  "title": "Design System: Founder Launch Intelligence",
+  "extensions": {
+    "colorMeta": {
+      "ink-950": {
+        "role": "neutral",
+        "displayName": "Black Ink",
+        "canonical": "#040a11",
+        "tonalRamp": ["#020508", "#040a11", "#06101a", "#07131f", "#0a1825", "#203748", "#768b99", "#eef7fa"]
+      },
+      "ink-925": {
+        "role": "neutral",
+        "displayName": "Shell Ink",
+        "canonical": "#06101a",
+        "tonalRamp": ["#020508", "#040a11", "#06101a", "#07131f", "#0a1825", "#203748", "#768b99", "#eef7fa"]
+      },
+      "ink-900": {
+        "role": "neutral",
+        "displayName": "Panel Ink",
+        "canonical": "#07131f",
+        "tonalRamp": ["#020508", "#040a11", "#06101a", "#07131f", "#0a1825", "#203748", "#768b99", "#eef7fa"]
+      },
+      "ink-875": {
+        "role": "neutral",
+        "displayName": "Raised Ink",
+        "canonical": "#0a1825",
+        "tonalRamp": ["#020508", "#040a11", "#06101a", "#07131f", "#0a1825", "#203748", "#768b99", "#eef7fa"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Rule Line",
+        "canonical": "#203748",
+        "tonalRamp": ["#07131f", "#0d1d2b", "#203748", "#31566b", "#4e6f83", "#768b99", "#a9bac5", "#eef7fa"]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule Line",
+        "canonical": "#31566b",
+        "tonalRamp": ["#07131f", "#0d1d2b", "#203748", "#31566b", "#4e6f83", "#768b99", "#a9bac5", "#eef7fa"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Human Text",
+        "canonical": "#eef7fa",
+        "tonalRamp": ["#203748", "#31566b", "#768b99", "#a9bac5", "#c9d7dd", "#dce9ee", "#eef7fa", "#ffffff"]
+      },
+      "text-soft": {
+        "role": "neutral",
+        "displayName": "Soft Text",
+        "canonical": "#a9bac5",
+        "tonalRamp": ["#203748", "#31566b", "#536f80", "#768b99", "#8fa4b0", "#a9bac5", "#dce9ee", "#eef7fa"]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Text",
+        "canonical": "#768b99",
+        "tonalRamp": ["#0d1d2b", "#203748", "#31566b", "#536f80", "#768b99", "#a9bac5", "#dce9ee", "#eef7fa"]
+      },
+      "cyan": {
+        "role": "primary",
+        "displayName": "Evidence Cyan",
+        "canonical": "#25d7f3",
+        "tonalRamp": ["oklch(15% 0.05 215)", "oklch(27% 0.08 215)", "oklch(39% 0.11 215)", "oklch(51% 0.14 215)", "oklch(63% 0.16 215)", "#25d7f3", "#8cecff", "oklch(95% 0.04 215)"]
+      },
+      "cyan-deep": {
+        "role": "primary",
+        "displayName": "Deep Evidence Cyan",
+        "canonical": "#0bb6d0",
+        "tonalRamp": ["oklch(15% 0.05 215)", "oklch(27% 0.08 215)", "oklch(39% 0.11 215)", "oklch(51% 0.14 215)", "#0bb6d0", "#25d7f3", "#8cecff", "oklch(95% 0.04 215)"]
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Availability Teal",
+        "canonical": "#36cdb0",
+        "tonalRamp": ["oklch(15% 0.05 175)", "oklch(27% 0.08 175)", "oklch(39% 0.1 175)", "oklch(51% 0.12 175)", "oklch(63% 0.13 175)", "#36cdb0", "oklch(83% 0.09 175)", "oklch(95% 0.04 175)"]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "Caution Amber",
+        "canonical": "#f3b23f",
+        "tonalRamp": ["oklch(15% 0.05 80)", "oklch(27% 0.08 80)", "#6d4c19", "#7c5920", "oklch(63% 0.13 80)", "#f3b23f", "oklch(83% 0.09 80)", "oklch(95% 0.04 80)"]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Critical Red",
+        "canonical": "#ff716c",
+        "tonalRamp": ["oklch(15% 0.06 30)", "oklch(27% 0.09 30)", "#7a3633", "oklch(51% 0.14 30)", "oklch(63% 0.16 30)", "#ff716c", "oklch(83% 0.09 30)", "oklch(95% 0.04 30)"]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Cyan",
+        "canonical": "#8cecff",
+        "tonalRamp": ["oklch(15% 0.04 215)", "oklch(27% 0.07 215)", "oklch(39% 0.1 215)", "#25d7f3", "#8cecff", "oklch(82% 0.08 215)", "oklch(90% 0.05 215)", "oklch(96% 0.03 215)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "First-viewport headline and major analytical page headings."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles inside the dossier."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Horizon and panel titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Founder-facing explanations, cell content, upload help, and status copy."
+      },
+      "label": {
+        "displayName": "Label Mono",
+        "purpose": "Evidence structure, stages, lifecycle labels, counts, and compact metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px var(--ink-950), 0 0 0 5px var(--focus)",
+        "purpose": "Keyboard focus visibility on the dark surface."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "160ms ease",
+        "purpose": "Upload drag and button hover state changes."
+      },
+      {
+        "name": "status-pulse",
+        "value": "1.2s steps(2, jump-none) infinite",
+        "purpose": "Loading status marker pulse."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms animation and transition duration under prefers-reduced-motion",
+        "purpose": "Respect reduced-motion preferences while preserving state."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-dossier",
+        "value": "1240px",
+        "purpose": "Hide the evidence spine and compress the dossier to board plus brief."
+      },
+      {
+        "name": "tablet-stack",
+        "value": "900px",
+        "purpose": "Stack hero and dossier, compress navigation into three tracks."
+      },
+      {
+        "name": "mobile-cells",
+        "value": "620px",
+        "purpose": "Turn horizon grids into single-column vertical domain sequences."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Universal upload and primary action control.",
+      "html": "<button class=\"ds-btn-primary\">Выбрать файлы <span aria-hidden=\"true\">+</span></button>",
+      "css": ".ds-btn-primary { align-items: center; background: #25d7f3; border: 1px solid transparent; color: #040a11; cursor: pointer; display: inline-flex; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; font-size: 13px; font-weight: 700; gap: 18px; justify-content: space-between; min-height: 46px; min-width: 210px; padding: 0 18px; transition: background-color 160ms ease; } .ds-btn-primary:hover { background: #8cecff; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px #040a11, 0 0 0 5px #8cecff; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary upload repeat and link-style action.",
+      "html": "<button class=\"ds-btn-secondary\">Добавить материалы</button>",
+      "css": ".ds-btn-secondary { align-items: center; background: transparent; border: 1px solid #0bb6d0; color: #25d7f3; cursor: pointer; display: inline-flex; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; font-size: 13px; font-weight: 700; gap: 18px; justify-content: space-between; min-height: 46px; padding: 0 18px; transition: background-color 160ms ease; } .ds-btn-secondary:hover { background: #0a1825; } .ds-btn-secondary:focus-visible { outline: none; box-shadow: 0 0 0 3px #040a11, 0 0 0 5px #8cecff; }"
+    },
+    {
+      "name": "Upload Target",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "First-view file intake target with dashed evidence border.",
+      "html": "<div class=\"ds-upload-target\"><div class=\"ds-upload-icon\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\"><path d=\"M16 22V6m0 0-6 6m6-6 6 6\"/><path d=\"M7 20v6h18v-6\"/></svg></div><strong>Загрузите материалы</strong><p>Перетащите файлы или выберите их на компьютере</p><button class=\"ds-upload-button\">Выбрать файлы <span aria-hidden=\"true\">+</span></button><small>PDF, DOCX, XLSX, CSV, изображения и ZIP.</small></div>",
+      "css": ".ds-upload-target { align-items: center; background: #07131f; border: 1px dashed #0bb6d0; color: #eef7fa; display: flex; flex-direction: column; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; gap: 14px; justify-content: center; min-height: 310px; padding: 32px; text-align: center; transition: background-color 160ms ease, border-color 160ms ease; } .ds-upload-target:hover { background: #0a1825; border-color: #25d7f3; } .ds-upload-icon { border: 1px solid #31566b; display: grid; height: 68px; place-items: center; transform: rotate(45deg); width: 68px; } .ds-upload-icon svg { fill: none; height: 34px; stroke: #25d7f3; stroke-linecap: square; stroke-width: 1.5; transform: rotate(-45deg); width: 34px; } .ds-upload-target strong { font-size: 20px; } .ds-upload-target p { color: #a9bac5; font-size: 13px; margin: 0; } .ds-upload-target small { color: #768b99; font-size: 11px; max-width: 440px; } .ds-upload-button { background: #25d7f3; border: 0; color: #040a11; font: inherit; font-size: 13px; font-weight: 700; min-height: 46px; min-width: 210px; padding: 0 18px; }"
+    },
+    {
+      "name": "Product Navigation",
+      "kind": "nav",
+      "refersTo": "chip-state",
+      "description": "Sticky product bar navigation with cyan active state and muted disabled case link.",
+      "html": "<nav class=\"ds-product-nav\" aria-label=\"Главная навигация\"><a class=\"ds-nav-link ds-nav-active\" href=\"#\">Новый анализ</a><span class=\"ds-nav-link ds-nav-disabled\">Кейсы <small>скоро</small></span><a class=\"ds-nav-link\" href=\"#\">Comparables →</a></nav>",
+      "css": ".ds-product-nav { background: #06101a; border-bottom: 1px solid #203748; display: flex; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; min-height: 64px; } .ds-nav-link { align-items: center; border-bottom: 2px solid transparent; color: #a9bac5; display: inline-flex; font-size: 13px; gap: 6px; padding: 0 18px; text-decoration: none; white-space: nowrap; } .ds-nav-link:hover { color: #eef7fa; } .ds-nav-active { border-bottom-color: #25d7f3; color: #25d7f3; } .ds-nav-disabled { color: #768b99; cursor: not-allowed; } .ds-nav-disabled small { border: 1px solid #203748; font-size: 9px; padding: 2px 4px; text-transform: uppercase; }"
+    },
+    {
+      "name": "Analysis Horizon",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Framed primary or deep analysis band containing seven domain cells.",
+      "html": "<section class=\"ds-horizon\"><header class=\"ds-horizon-header\"><div><span>Уровень 1</span><h2>Первичный анализ</h2></div><em>Нужны материалы</em></header><div class=\"ds-horizon-grid\"><article class=\"ds-domain-mini\"><span>01</span><strong>Проблема</strong><p>Ценность и доказательства боли</p></article><article class=\"ds-domain-mini\"><span>02</span><strong>Клиент</strong><p>ICP и сегменты</p></article></div></section>",
+      "css": ".ds-horizon { background: #07131f; border: 1px solid #203748; color: #eef7fa; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; } .ds-horizon-header { align-items: center; border-bottom: 1px solid #203748; display: flex; justify-content: space-between; padding: 15px 17px; } .ds-horizon-header span { color: #25d7f3; display: block; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; } .ds-horizon-header h2 { font-size: 16px; margin: 4px 0 0; text-transform: uppercase; } .ds-horizon-header em { border: 1px solid #203748; color: #768b99; font-style: normal; font-size: 9px; padding: 5px 7px; text-transform: uppercase; } .ds-horizon-grid { display: grid; grid-template-columns: repeat(2, minmax(110px, 1fr)); } .ds-domain-mini { border-right: 1px solid #203748; min-height: 150px; padding: 14px; } .ds-domain-mini:last-child { border-right: 0; } .ds-domain-mini span { color: #768b99; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 9px; } .ds-domain-mini strong { display: block; font-size: 12px; margin: 16px 0 13px; } .ds-domain-mini p { color: #a9bac5; font-size: 11px; line-height: 1.4; margin: 0; }"
+    },
+    {
+      "name": "Domain Cell",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Compact analysis domain cell with mono ordinal, icon space, copy, and empty evidence state.",
+      "html": "<article class=\"ds-domain-cell\"><span class=\"ds-domain-number\">07</span><div class=\"ds-domain-title\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7l8-4Zm0 5v5m0 3v.1\"/></svg><h3>Риски</h3></div><p>Нужны материалы</p><span class=\"ds-empty-evidence\">Нет evidence</span></article>",
+      "css": ".ds-domain-cell { background: #07131f; border-right: 1px solid #203748; color: #eef7fa; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; min-height: 170px; padding: 14px; position: relative; width: 150px; } .ds-domain-number { color: #768b99; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 9px; } .ds-domain-title { align-items: center; display: flex; gap: 8px; margin: 16px 0 13px; } .ds-domain-title svg { fill: none; height: 23px; stroke: #f3b23f; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.3; width: 23px; } .ds-domain-title h3 { font-size: 12px; margin: 0; } .ds-domain-cell p { color: #a9bac5; font-size: 11px; line-height: 1.4; margin: 0; } .ds-empty-evidence { bottom: 13px; color: #768b99; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 9px; left: 14px; position: absolute; }"
+    },
+    {
+      "name": "Evidence Spine",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Vertical provenance lane linking intake to analysis horizons.",
+      "html": "<aside class=\"ds-evidence-spine\" aria-label=\"Путь доказательств\"><div class=\"ds-spine-label\">Доказательства</div><div class=\"ds-spine-line\"><span class=\"ds-node ds-active\"></span><span class=\"ds-node\"></span><span class=\"ds-node\"></span><span class=\"ds-node\"></span></div><p>1 локальный inventory</p></aside>",
+      "css": ".ds-evidence-spine { align-items: center; background: #06101a; border-left: 1px solid #203748; border-right: 1px solid #203748; color: #768b99; display: flex; flex-direction: column; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; min-height: 360px; padding: 28px 10px; width: 96px; } .ds-spine-label { color: #a9bac5; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; writing-mode: vertical-rl; } .ds-spine-line { align-items: center; display: flex; flex: 1; flex-direction: column; justify-content: space-between; margin: 20px 0; position: relative; width: 20px; } .ds-spine-line::before { background: #31566b; content: \"\"; height: 100%; left: 50%; position: absolute; width: 1px; } .ds-node { background: #06101a; border: 1px solid #31566b; height: 12px; position: relative; width: 12px; } .ds-active { background: #25d7f3; border-color: #25d7f3; } .ds-evidence-spine p { font-size: 9px; margin: 0; text-align: center; }"
+    },
+    {
+      "name": "Case Brief",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Right rail for inventory counts, next steps, and runtime status.",
+      "html": "<aside class=\"ds-case-brief\"><span class=\"ds-kicker\">Краткое досье</span><h2>Новый анализ</h2><p>Неполный набор данных допустим. Система начнёт с того, что есть.</p><section><h3>Inventory data room <b>0</b></h3><ul><li><span>Документы и презентации</span><strong>0</strong></li><li><span>Финансовые таблицы</span><strong>0</strong></li></ul></section></aside>",
+      "css": ".ds-case-brief { background: #06101a; color: #eef7fa; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; padding: 30px 24px; width: 360px; } .ds-kicker { color: #25d7f3; display: block; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; } .ds-case-brief h2 { font-size: 24px; letter-spacing: -0.025em; margin: 7px 0 0; } .ds-case-brief p { color: #a9bac5; font-size: 12px; line-height: 1.5; margin: 13px 0 0; } .ds-case-brief section { border-top: 1px solid #203748; margin-top: 24px; padding-top: 20px; } .ds-case-brief h3 { font-size: 11px; letter-spacing: 0.04em; margin: 0 0 12px; text-transform: uppercase; } .ds-case-brief h3 b { border: 1px solid #31566b; color: #25d7f3; float: right; font-family: \"Cascadia Code\", Consolas, monospace; font-size: 11px; padding: 4px 7px; } .ds-case-brief ul { list-style: none; margin: 0; padding: 0; } .ds-case-brief li { align-items: center; border-top: 1px solid #203748; color: #a9bac5; display: flex; font-size: 11px; justify-content: space-between; padding: 9px 0; } .ds-case-brief strong { color: #eef7fa; font-family: \"Cascadia Code\", Consolas, monospace; }"
+    },
+    {
+      "name": "Capability Warning",
+      "kind": "custom",
+      "refersTo": "chip-state",
+      "description": "Text-and-icon warning state for unavailable API or capability checks.",
+      "html": "<div class=\"ds-capability-warning\" role=\"status\"><span aria-hidden=\"true\">!</span><div><strong>API сейчас недоступен</strong><p>Локальный inventory работает, но запуск анализа выключен. Никакие результаты не имитируются.</p></div></div>",
+      "css": ".ds-capability-warning { align-items: flex-start; border: 1px solid #6d4c19; color: #a9bac5; display: flex; font-family: \"Segoe UI Variable\", \"Aptos\", \"Segoe UI\", ui-sans-serif, system-ui, sans-serif; font-size: 10px; gap: 9px; line-height: 1.45; padding: 10px; } .ds-capability-warning > span { border: 1px solid #f3b23f; color: #f3b23f; display: grid; flex: 0 0 18px; font-family: \"Cascadia Code\", Consolas, monospace; height: 18px; place-items: center; } .ds-capability-warning strong { color: #eef7fa; display: block; font-size: 11px; margin-bottom: 3px; } .ds-capability-warning p { margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Evidence Dossier",
+    "overview": "Founder Launch Intelligence is built as a dark analytical case file: a matte near-black workspace where uploaded materials become an evidence spine and two connected analysis horizons. The interface is dense enough for an investor-grade product demo, but its hierarchy stays calm: one primary upload action, one case, and no decorative hero imagery.\n\nThe system uses precise rules, compact cells, readable Russian product copy, and restrained status language to make uncertainty visible without turning the page into an operator console. Primary analysis and deep analysis are treated as horizons inside the same dossier, not as separate modes or competing dashboards.",
+    "keyCharacteristics": [
+      "Matte near-black navy surfaces with off-white human-facing text.",
+      "Cyan marks primary action, navigation, progress, and evidence paths.",
+      "Teal confirms available capability; amber warns; red is reserved for critical unavailable states.",
+      "One-pixel rules, compact square controls, and soft 2-6px corners create structure without decorative depth.",
+      "The first viewport always gives the upload action visual priority and never shows fake scores before evidence exists."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence-Only Color Rule",
+        "body": "Cyan, teal, amber, and red must describe action, evidence, capability, or risk; they are not decorative accents.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Scarcity Rule",
+        "body": "Red appears only when the state is explicitly critical or unavailable, never as a generic heat-map color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Human-First Type Rule",
+        "body": "Use the sans stack for founder decisions and explanations; reserve monospace for evidence structure, not for the main product voice.",
+        "section": "typography"
+      },
+      {
+        "name": "The Same-Case Rule",
+        "body": "Primary and deep analysis stay visually connected inside one case; do not split them into tabs, modes, or unrelated dashboards.",
+        "section": "layout"
+      },
+      {
+        "name": "The Above-The-Fold Upload Rule",
+        "body": "The universal upload target remains a first-view primary action on desktop and mobile.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Dossier Rule",
+        "body": "Surfaces are flat by default; structure comes from ink layers, borders, and measurement lines rather than ambient shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep universal upload as the first-view primary action.",
+      "**Do** show primary and deep analysis as connected horizons inside the same case.",
+      "**Do** use explicit empty states such as \"needs materials\" or \"no evidence\" before analysis exists.",
+      "**Do** communicate warning and capability state with text and icons as well as color.",
+      "**Do** keep Founder Workspace separate from Admin, tracing, evals, prompts, model controls, and raw operator logs.",
+      "**Do** use the subtle measurement grid only on secondary comparables-style surfaces, not as a global decoration."
+    ],
+    "donts": [
+      "**Don't** show fake scores, coverage, metrics, benchmarks, customers, or investment claims before evidence exists.",
+      "**Don't** imitate Bloomberg terminals, developer consoles, generic AI chat, chatbot bubbles, or finance dashboards.",
+      "**Don't** use purple AI gradients, neon glow, glossy glass, stock photography, decorative robots, or ornamental hero imagery.",
+      "**Don't** use red for ordinary uncertainty or warning; amber handles caution and red stays critical.",
+      "**Don't** split delivery profile B and future profile C into user-facing plans or modes."
+    ]
+  }
+}

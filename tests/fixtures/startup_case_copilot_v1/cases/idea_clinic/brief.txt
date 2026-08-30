@@ -1,0 +1,22 @@
+Founder idea brief: CareLoop Recall
+
+Concept:
+CareLoop Recall is a follow-up coordination service for outpatient clinics that lose patient continuity after visits because reminders, lab callbacks, and chronic-care check-ins are scattered across phone calls and manual notes.
+
+Buyer:
+Clinic administrators and medical directors who need a reliable follow-up process without replacing the existing appointment system.
+
+User:
+Nurses, front-desk coordinators, and care managers who handle post-visit reminders and patient callback queues.
+
+Geography:
+Initial launch is planned for private clinics in Georgia and Armenia, where multilingual patient communication and clinic approval workflows are important constraints.
+
+Pricing hypothesis:
+The founder is testing whether clinics prefer a monthly service package, a per-active-patient model, or a setup fee with ongoing support. No clinic has accepted a commercial term yet.
+
+Launch constraints:
+The product cannot launch until patient-consent language, clinic staff workflow, and data-retention rules are reviewed with local advisors.
+
+Known gaps:
+No uploaded document provides revenue, expense, burn, cash balance, customer count, ARR, MRR, or cohort metrics. The case is idea-only and should keep planning scenarios separate from evidence-backed facts.

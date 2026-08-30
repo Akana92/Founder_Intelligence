@@ -1,0 +1,15 @@
+{
+  "cik": "0001067983",
+  "entityType": "operating",
+  "name": "BERKSHIRE HATHAWAY INC",
+  "tickers": ["BRK.B"],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001067983-26-000001"],
+      "form": ["10-K"],
+      "filingDate": ["2026-06-30"],
+      "primaryDocument": ["brk-2026-10k.htm"],
+      "acceptanceDateTime": ["2026-06-30T21:00:00.000Z"]
+    }
+  }
+}

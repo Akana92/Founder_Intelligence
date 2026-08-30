@@ -1,0 +1,31 @@
+{
+  "name": "founder-launch-intelligence-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/build-founder.mjs",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types lib/contracts.test.ts && node --experimental-strip-types lib/advisor-contracts.test.ts && node --experimental-strip-types lib/scenario-contracts.test.ts && node --experimental-strip-types lib/capability-presentation.test.ts && node --experimental-strip-types lib/startup-contracts.test.ts && node --experimental-strip-types lib/gtm-presentation.test.ts && node --experimental-strip-types lib/profile-presentation.test.ts && node --experimental-strip-types lib/report-presentation.test.ts && node --experimental-strip-types lib/readiness-presentation.test.ts && node --experimental-strip-types lib/chart-presentation.test.ts && node --experimental-strip-types lib/advisor-presentation.test.ts && node --experimental-strip-types lib/scenario-presentation.test.ts && node --experimental-strip-types lib/founder-readable-presentation.test.ts && node --experimental-strip-types lib/case-copilot-presentation.test.ts && node --experimental-strip-types lib/runtime-config.test.ts && node --experimental-strip-types lib/founder-case-storage.test.ts && node scripts/direction-contract.test.mjs && node --experimental-strip-types lib/startup-proxy.test.ts && node --experimental-strip-types lib/founder-api-client.test.ts && node --experimental-strip-types lib/startup-state-machine.test.ts && node --experimental-strip-types app/globals.visual.test.ts && node --experimental-strip-types components/upload-entry-visual.test.ts && node --experimental-strip-types components/founder-analysis-pages.test.ts && node --experimental-strip-types components/founder-strategy-pages.test.ts && node --experimental-strip-types components/founder-advisor-pages.test.ts && node --experimental-strip-types components/founder-workspace-controller.test.ts && node --experimental-strip-types lib/navigation.test.ts && node --experimental-strip-types lib/upload.test.ts"
+  },
+  "dependencies": {
+    "lucide-react": "1.31.0",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.0",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

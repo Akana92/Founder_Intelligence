@@ -1,0 +1,58 @@
+{
+  "sources": [
+    {
+      "source_key": "crm_landscape_2026",
+      "url": "https://example.com/research/crm-landscape-2026",
+      "label": "CRM landscape 2026",
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-08-13T08:00:00Z",
+      "query": "b2b crm automation competitors"
+    },
+    {
+      "source_key": "sales_ops_buyer_notes",
+      "url": "https://example.com/research/sales-ops-buyer-notes",
+      "label": "Sales operations buyer notes",
+      "as_of": "2026-07-15",
+      "retrieved_at": "2026-08-13T08:00:00Z",
+      "query": "sales operations workflow alternatives"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "HubSpot",
+      "category": "direct",
+      "confidence": "0.83",
+      "source_keys": ["crm_landscape_2026"]
+    },
+    {
+      "name": "HubSpot",
+      "category": "direct",
+      "confidence": "0.88",
+      "source_keys": ["sales_ops_buyer_notes"]
+    },
+    {
+      "name": "Salesforce Starter",
+      "category": "indirect",
+      "confidence": "0.72",
+      "source_keys": ["crm_landscape_2026"]
+    },
+    {
+      "name": "Spreadsheet CRM",
+      "category": "substitute",
+      "confidence": "0.67",
+      "source_keys": ["sales_ops_buyer_notes"]
+    },
+    {
+      "name": "Manual founder-led sales process",
+      "category": "do_nothing",
+      "confidence": "0.61",
+      "source_keys": ["sales_ops_buyer_notes"]
+    },
+    {
+      "name": "Microsoft Copilot CRM Extension",
+      "category": "potential_entrant",
+      "confidence": "0.58",
+      "source_keys": ["crm_landscape_2026"]
+    }
+  ]
+}

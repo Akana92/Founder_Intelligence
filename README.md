@@ -2,6 +2,8 @@
 
 Local-first Python project for the Stage 1A public company due diligence MVP.
 
+Русский обзор Founder Intelligence, его архитектуры, текущего MVP и следующего этапа: [docs/PLATFORM_OVERVIEW_RU.md](docs/PLATFORM_OVERVIEW_RU.md).
+
 ## Runtime
 
 - Python: `3.12`
@@ -112,7 +114,7 @@ Surface split:
 - Founder Workspace: separate Next.js product UI for universal upload, the same-case primary/deep analysis dossier, and founder-safe public comparables.
 - Founder API: versioned FastAPI contract consumed by the Founder Workspace.
 - Admin Console: separate Streamlit surface for operator tracing, evaluations, privacy, source health, and cost/latency controls.
-- Startup analysis capabilities remain explicitly `planned` until safe ingest and the startup workflow are implemented; the UI does not manufacture results.
+- `universal_upload`, `primary_startup_analysis` and `public_comparable_analysis` are available in `founder_capabilities.v1`; the full `deep_startup_analysis` capability remains `planned` until its separate acceptance is complete. The UI does not manufacture results.
 
 Expose on all interfaces only for trusted local demos:
 
